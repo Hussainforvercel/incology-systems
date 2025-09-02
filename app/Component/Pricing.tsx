@@ -1,7 +1,5 @@
 
-
 "use client";
-
 import { useState } from "react";
 
 import { Check, Star, Heart, Tag } from "lucide-react";
