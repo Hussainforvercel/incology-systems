@@ -5,6 +5,8 @@
 import { useEffect, useRef } from "react";
 import { FaXTwitter, FaFacebook, FaPinterest, FaInstagram, FaPaypal } from "react-icons/fa6";
 import { SiNotion, SiSlack, SiGoogledrive } from "react-icons/si";
+import { Plug, Layers } from "lucide-react";
+
 import gsap from "gsap";
 
 // Icons ka data
@@ -45,8 +47,9 @@ export default function IntegrationsSection() {
     <section className="relative bg-[#04070D]  text-white min-h-screen flex justify-center items-center px-6">
       <div className="max-w-[1100px] w-full text-center">
         {/* Heading */}
+
         <div className="inline-flex items-center mt-15 gap-2 text-xs font-medium text-white bg-black/40 px-4 py-1.5 rounded-full border border-neutral-700 shadow-md mb-6">
-          INTEGRATIONS
+          <Plug size={14} className="text-white" /> INTEGRATIONS
         </div>
         <h2 className="text-4xl font-bold mt-2">
           Seamless <span className="italic">Integrations</span>

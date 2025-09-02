@@ -3,7 +3,8 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+
+import { ChevronDown, HelpCircle } from "lucide-react";
 
 const faqs = [
   {
@@ -14,22 +15,22 @@ const faqs = [
   {
     question: "Do I need technical knowledge to use your service?",
     answer:
-      "No, our platform is designed to be user-friendly and requires little to no technical expertise.",
+      "Not at all. Our team handles the setup, integration, and optimization. You just focus on your goals — we’ll automate the rest..",
   },
   {
     question: "Can you integrate with our existing tools?",
     answer:
-      "Yes, we can integrate seamlessly with most popular tools and platforms you already use.",
+      "Yes! We support integrations with CRMs, project management tools, communication apps, and more — tailored to your stack.",
   },
   {
     question: "How long does implementation take?",
     answer:
-      "Implementation typically takes just a few days depending on your specific requirements.",
+      "Most clients see their first automation live within 1–2 weeks, depending on complexity and the number of workflows.",
   },
   {
     question: "Is your AI secure and compliant?",
     answer:
-      "Yes, we follow industry best practices for security and compliance.",
+      "Absolutely. We use enterprise-grade security practices and ensure compliance with major data privacy standards like GDPR.",
   },
 ];
 
@@ -47,7 +48,7 @@ export default function FAQSection() {
         {/* Heading */}
         <div className="text-center">
           <div className="inline-flex items-center gap-2 text-xs font-medium text-white bg-black px-4 py-1.5 rounded-full border border-neutral-700 shadow-md shadow-black/40 mb-6">
-            <span className="text-green-400"></span> FAQS
+            <HelpCircle size={14} className="text-white" /> FAQS
           </div>
           <h2 className="text-3xl font-bold">
             Frequently Asked <span className="italic">Questions</span>

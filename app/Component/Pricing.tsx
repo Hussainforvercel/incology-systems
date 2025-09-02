@@ -3,7 +3,8 @@
 "use client";
 
 import { useState } from "react";
-import { Check, Star, Heart } from "lucide-react";
+
+import { Check, Star, Heart, Tag } from "lucide-react";
 
 const plans = [
   {
@@ -22,7 +23,7 @@ const plans = [
     name: "Pro",
     price: "$80",
     duration: "/month",
-    popular: true, 
+    popular: true,
     features: [
       "10+ Automated Workflows",
       "Advanced AI Assistant Features",
@@ -50,11 +51,12 @@ export default function PricingSection() {
 
   return (
     <section className="relative bg-[#04070D] text-white py-10 px-2">
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto  text-center">
         {/* Pricing Badge (Top) */}
-        <div className="inline-flex items-center gap-2 mt-4 text-xs font-medium text-white bg-black px-4 py-1.5 rounded-full border border-neutral-700 shadow-md shadow-black/40 mb-6">
-          <span className="text-green-400">💰</span> Pricing
-        </div>
+        
+<div className="inline-flex items-center gap-2 mt-4 text-xs font-medium text-white bg-black px-4 py-1.5 rounded-full border border-neutral-700 shadow-md shadow-black/40 mb-6">
+  <Tag size={14} className="text-white" /> Pricing
+</div>
         {/* Heading */}
         <h2 className="text-3xl font-semibold">
           Flexible Plans for <span className="italic">Everyone</span>
@@ -68,30 +70,27 @@ export default function PricingSection() {
           <div className="bg-[#1c202b] px-3 py-2 rounded-md flex items-center ">
             <button
               onClick={() => setBilling("monthly")}
-              className={`px-4 py-2 rounded-md text-sm cursor-pointer ${
-                billing === "monthly"
-                  ? "bg-black text-white"
-                  : "text-gray-400"
-              }`}
+              className={`px-4 py-2 rounded-md text-sm cursor-pointer ${billing === "monthly"
+                ? "bg-black text-white"
+                : "text-gray-400"
+                }`}
             >
               Monthly
             </button>
 
             <button
               onClick={() => setBilling("yearly")}
-              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm cursor-pointer relative ${
-                billing === "yearly"
-                  ? "bg-black text-white"
-                  : " bg-[#10131C] text-gray-400"
-              }`}
+              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm cursor-pointer relative ${billing === "yearly"
+                ? "bg-black text-white"
+                : " bg-[#10131C] text-gray-400"
+                }`}
             >
               <span>Yearly</span>
               <span
-                className={`px-2 py-0.5 rounded-full text-xs font-medium ${
-                  billing === "yearly"
-                    ? "bg-gray-700 text-gray-300"
-                    : "bg-black text-white"
-                }`}
+                className={`px-2 py-0.5 rounded-full text-xs font-medium ${billing === "yearly"
+                  ? "bg-gray-700 text-gray-300"
+                  : "bg-black text-white"
+                  }`}
               >
                 Save 20%
               </span>
@@ -105,10 +104,9 @@ export default function PricingSection() {
             <div
               key={plan.name}
               className={`relative #04070D rounded-xl p-6 border border-neutral-800 transition flex flex-col
-                ${
-                  plan.popular
-                    ? "shadow-md shadow-black/60 hover:shadow-xl hover:shadow-black/80 pb-16 scale-105 origin-top"
-                    : "pb-12"
+                ${plan.popular
+                  ? "shadow-md shadow-black/60 hover:shadow-xl hover:shadow-black/80 pb-16 scale-105 origin-top"
+                  : "pb-12"
                 }`}
             >
               <div>
@@ -137,18 +135,15 @@ export default function PricingSection() {
                   <button
                     className="w-full bg-[##04070D] border border-neutral-700 py-2 rounded-lg flex justify-center items-center gap-2 relative group overflow-hidden transition-all duration-300"
                   >
-                    Get Started →
+                    Get Started
 
                     {/* White strip + shadow (always visible for center card) */}
                     {plan.popular && (
                       <span
-                        className="absolute -bottom-2 left-1/2 -translate-x-1/2 
-                            w-2/3 h-3 rounded-full
-                            bg-transparent
-                            shadow-[0_4px_10px_white]
-                            opacity-90
-                            transition-all duration-500 ease-out
-                            group-hover:w-full group-hover:h-4 group-hover:shadow-[0_6px_20px_white] group-hover:opacity-100"
+                        className="absolute bottom-0 left-1/2 -translate-x-1/2 w-45 h-[3px] 
+                                  bg-gradient-to-r from-transparent via-white to-transparent 
+                                  opacity-90 transition-all duration-800 
+                                  group-hover:w-full group-hover:left-0 group-hover:translate-x-0"
                       ></span>
                     )}
                   </button>

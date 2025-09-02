@@ -18,7 +18,7 @@ export default function Navbar() {
           <li><a href="#" className="hover:text-gray-300">Process</a></li>
           <li><a href="#" className="hover:text-gray-300">Pricing</a></li>
           <li><a href="#" className="hover:text-gray-300">Blog</a></li>
-          <li><a href="#" className="hover:text-gray-300">Contact</a></li>
+          <li><a href="/contact" className="hover:text-gray-300">Contact</a></li>
         </ul>
 
         <button className="border-1 flex gap-2 px-5 py-2 rounded-md  bg-gray-900 border-gray-800">

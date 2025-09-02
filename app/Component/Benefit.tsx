@@ -1,17 +1,20 @@
-
 "use client";
 import React from "react";
+import { Star } from "lucide-react";
 
 const AnimatedFeatures = () => {
   return (
-    <section className="relative bg-[#04070D] text-white py-26 px-">
+    <section className="relative bg-[#04070D] text-white py-26 px-4">
       <div className="max-w-6xl mx-auto">
         {/* -------- Heading + Button -------- */}
         <div className="text-center mb-14">
-          <button className="px-5 py-1 rounded-full bg-[#0D1018] border border-white/10 text-xs tracking-wide text-gray-300 mb-4">
-            BENEFITS
-          </button>
-          <h2 className="text-3xl font-semibold text-white">
+          <div className="text-center">
+            <button className="inline-flex items-center gap-2 px-5 py-1 rounded-full bg-[#0D1018] border border-white/10 text-xs tracking-wide text-white mb-4">
+              <Star size={14} className="text-white" />
+              BENEFITS
+            </button>
+          </div>
+          <h2 className="text-3xl font-semibold text-white mt-2">
             Why Choose <span className="italic text-gray-300">Us?</span>
           </h2>
           <p className="text-gray-400 mt-2 text-sm">
@@ -19,18 +22,18 @@ const AnimatedFeatures = () => {
           </p>
         </div>
 
-        {/* -------- Features Grid -------- */}
-        <div className="flex flex-col md:flex-row justify-center gap-8 items-start">
+        {/* -------- Features Grid (Responsive) -------- */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {/* ---------- Real-Time Intelligence (Clock) ---------- */}
-          <div className="flex flex-col bg-[#05080E] border border-white/10 rounded-2xl p-8 w-95 h-[400px] text-center group shadow-inner shadow-[rgba(207,231,255,0.2)]">
+          <div className="flex flex-col bg-[##04070D] border border-white/10 rounded-2xl p-8 text-center group shadow-inner shadow-[rgba(207,231,255,0.2)]">
             <div className="flex justify-center mb-8">
               <div className="relative w-48 h-48 rounded-full overflow-hidden">
                 {/* Watch face gradient */}
                 <div className="absolute inset-0 rounded-full bg-gradient-to-b from-[#10131c] to-transparent shadow-inner shadow-[rgba(207,231,255,0.15)]"></div>
 
-                {/* Clock hand (same smooth duration as blades) */}
+                {/* Clock hand */}
                 <div
-                  className="absolute top-1/2 left-1/2 w-[45%] h-[8px] bg-gray-400 origin-left rounded-sm 
+                  className="absolute top-1/2 left-1/2 w-[45%] h-[8px] bg-[#12151E] origin-left rounded-sm 
                   -rotate-150 transition-transform duration-[800ms] ease-linear group-hover:rotate-0"
                 ></div>
 
@@ -50,10 +53,9 @@ const AnimatedFeatures = () => {
           </div>
 
           {/* ---------- Measurable Impact (Bars) ---------- */}
-          <div className="flex flex-col bg-[#05080E] border border-gray-800 rounded-2xl p-8 w-95 h-[400px] text-center group">
-            <div className="flex justify-center mb-18">
+          <div className="flex flex-col bg-[#05080E] border border-gray-800 rounded-2xl p-8 text-center group">
+            <div className="flex justify-center mb-8">
               <div className="flex items-end gap-4 h-40">
-                {/* Bars with smooth same duration */}
                 <div className="w-12 bg-[#13161F] rounded-[12px] h-17 transition-all duration-500 ease-linear group-hover:h-20"></div>
                 <div className="w-12 bg-[#13161F] rounded-[12px] h-25 transition-all duration-500 ease-linear delay-100 group-hover:h-28"></div>
                 <div className="w-12 bg-[#13161F] rounded-[12px] h-24 transition-all duration-500 ease-linear delay-200 group-hover:h-36"></div>
@@ -67,7 +69,8 @@ const AnimatedFeatures = () => {
           </div>
 
           {/* --------- Seamless Integration (Blades) ---------- */}
-          <div className="flex flex-col bg-[#05080E] border border-gray-800 rounded-2xl p-8 w-95 h-[400px] text-center group">
+          <div className="flex flex-col bg-[#05080E] border border-gray-800 rounded-2xl p-8 text-center group 
+                          md:col-span-2 md:mx-auto lg:col-span-1">
             <div className="flex justify-center mb-8">
               <div className="relative w-52 h-52 transition-transform duration-[15000ms] ease-linear group-hover:rotate-[360deg]">
                 {/* Center hub */}
@@ -116,4 +119,3 @@ const AnimatedFeatures = () => {
 };
 
 export default AnimatedFeatures;
-

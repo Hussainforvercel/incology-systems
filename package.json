@@ -3,19 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev ",
+    "dev": "next dev",
     "build": "next build ",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
-<<<<<<< HEAD
+
     "framer-motion": "^12.23.12",
     "gsap": "^3.13.0",
-=======
+
     "bootstrap": "^5.3.8",
     "lucide-react": "^0.542.0",
->>>>>>> e08982a0126c00578e0c2d6dfcb1aeb9dc232c61
+
     "next": "15.5.2",
     "react": "19.1.0",
     "react-dom": "19.1.0",
