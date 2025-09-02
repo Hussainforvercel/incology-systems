@@ -1,0 +1,103 @@
+import React from "react";
+import { Check, X } from "lucide-react";
+
+const Section6 = () => {
+    const landioFeatures = [
+        "Fast setup with ready AI workflows",
+        "Built to grow and adapt with you",
+        "Real-time, AI-powered analytics",
+        "Automates tasks, reducing overhead",
+        "Expert support + AI guidance",
+    ];
+
+    const othersFeatures = [
+        "Slower execution and manual setup",
+        "Requires manual updates as you scale",
+        "Limited or delayed reporting",
+        "Higher labor costs, less automation",
+        "Generic support or none at all",
+    ];
+
+    return (
+        <section className="relative bg-[#0B0B0E] bg-gradient-to-t  from-gray-700/10 to-black text-white   py-20 ">
+
+            <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-gray-800 to-black"></div>
+            <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-gray-800 to-black"></div>
+
+            <div className="max-w-6xl mx-auto px-4 text-center">
+
+                <span className="text-xs uppercase tracking-widest bg-gray-800/40 px-3 py-1 rounded-full text-gray-300">
+                    Comparison
+                </span>
+
+                <h2 className="text-3xl md:text-4xl font-bold mt-4">
+                    Why Choose Us <span className="italic text-gray-300">Over Others</span>
+                </h2>
+                <p className="text-gray-400 mt-3 text-sm md:text-base">
+                    See how we compare against others in performance, growth
+                </p>
+                {/* Cards */}
+                <div className="grid md:grid-cols-2  gap-8 mt-14">
+                    <div>
+                        <div className="flex items-center justify-center gap-1 mb-6">
+                            <img width={80} src="https://framerusercontent.com/images/04vJJZ3D2ponPv6rzLBq6sf2PZU.svg" alt="" />
+                        </div>
+                        <div className="rounded-2xl border border-t-3 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black shadow-lg p-6 text-left">
+                            <ul className="space-y-1">
+                                {landioFeatures.map((item, i) => (
+                                    <li key={i} className="flex flex-col">
+
+                                        <div className="flex items-center gap-3 py-3">
+                                            <Check className="text-gray-400 w-5 h-5 shrink-0" />
+                                            <span>{item}</span>
+                                        </div>
+
+                                        {i !== othersFeatures.length - 1 && (
+                                            <div className="h-[1px] w-[80%] bg-gradient-to-r from-black via-gray-700 to-black mx-auto" />
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className="flex items-center justify-center gap-1 mb-6">
+                            {/* Icon */}
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 -960 960 960"
+                                className="w-6 h-6 text-white"
+                                fill="currentColor"
+                            >
+                                <path d="M480-80q-33 0-56.5-23.5T400-160v-320q0-33 23.5-56.5T480-560h320q33 0 56.5 23.5T880-480v320q0 33-23.5 56.5T800-80H480Zm0-80h320v-320H480v320Zm-240-80v-400q0-33 23.5-56.5T320-720h400v80H320v400h-80ZM80-400v-400q0-33 23.5-56.5T160-880h400v80H160v400H80Zm400 240v-320 320Z" />
+                            </svg>
+
+                            <h3 className="text-xl font-semibold italic">Others</h3>
+                        </div>
+
+                        <div className="rounded-2xl border border-t-3 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black shadow-lg p-6 text-left">
+                            <ul className="space-y-1">
+                                {othersFeatures.map((item, i) => (
+                                    <li key={i} className="flex flex-col">
+
+                                        <div className="flex items-center gap-3 py-3">
+                                            <X className="text-gray-400 w-5 h-5 shrink-0" />
+                                            <span>{item}</span>
+                                        </div>
+
+                                        {i !== othersFeatures.length - 1 && (
+                                            <div className="h-[1px] w-[80%] bg-gradient-to-r from-black via-gray-700 to-black mx-auto" />
+                                        )}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Section6;

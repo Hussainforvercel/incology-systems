@@ -20,7 +20,6 @@ const Section3 = () => {
                         Everything you need to automate operations, boost productivity
                     </p>
 
-                    {/* Features Grid */}
                     <div className="grid mb-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                         {/* Card 1 */}
                         <div className="p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900  transition">
@@ -36,8 +35,6 @@ const Section3 = () => {
                             </p>
                         </div>
 
-
-
                         {/* Card 2 */}
 
                         <div className="p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900  transition">
@@ -52,7 +49,6 @@ const Section3 = () => {
                                 Build tailored AI systems that align with your business goals and challenges.
                             </p>
                         </div>
-
 
                         {/* Card 3 */}
 
@@ -70,7 +66,7 @@ const Section3 = () => {
                         </div>
                     </div>
 
-
+                    {/* down cards */}
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
                         {/* Card 1 */}
@@ -87,8 +83,6 @@ const Section3 = () => {
                             </p>
                         </div>
 
-
-
                         {/* Card 2 */}
 
                         <div className="p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900 transition">
@@ -103,7 +97,6 @@ const Section3 = () => {
                                 Build tailored AI systems that align with your business goals and challenges.
                             </p>
                         </div>
-
 
                         {/* Card 3 */}
 
@@ -120,9 +113,6 @@ const Section3 = () => {
                             </p>
                         </div>
                     </div>
-
-
-
                 </div>
             </section>
         </>

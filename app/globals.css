@@ -42,3 +42,16 @@
 .animate-scrollCode {
   animation: scrollCode 8s linear infinite;
 }
+
+.animation{
+  margin-top: 283px !important;
+}
+
+.mainIconAni{
+  margin-top: 25%  !important;
+  padding: 15px;
+}
+
+.blur{
+   filter: blur(1px)
+}

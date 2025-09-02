@@ -49,9 +49,9 @@ const services = [
   },
 ];
 
- function Section5() {
+function Section5() {
   return (
-    <section className="bg-black text-white py-20">
+    <section className="bg-black text-white pb-20">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service) => (
@@ -59,19 +59,19 @@ const services = [
               key={service.id}
               className="relative group bg-gradient-to-b from-gray-900/60 to-black border border-t-3 border-gray-800 rounded-3xl p-6 shadow-lg hover:shadow-[0_0_25px_rgba(255,255,255,0.1)] transition-all duration-500 animate-[float_6s_ease-in-out_infinite]"
             >
-              {/* Card Glow */}
+              {/* Card */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-gray-800/30 to-gray-700/10 blur-xl opacity-40 group-hover:opacity-60 transition"></div>
 
-              {/* SEARCH TYPE */}
+              {/* SEARCH */}
               {service.type === "search" && (
                 <div className="border-t-2 rounded-xl pt-2  border-gray-800 ">
                   <div className="border-t-2 rounded-xl pt-2 border-gray-800 ">
                     <div className="border border-t-2 w-full border-b-0 border-gray-800 pb-4 pt-8 px-2 rounded-xl">
-                      <button
+                      <div
                         className="w-full flex items-center justify-between border-t-2 border-gray-800 px-3 py-2 mb-3 rounded-full bg-black/50 text-gray-300 border border-gray-700 focus:outline-none"
                       >Research anything....  <button className=" bg-white text-black px-5 py-1 rounded-full hover:bg-gray-200 transition">
                           Research
-                        </button> </button>
+                        </button> </div>
 
                       {service.content && (
                         <ul className="mt-3 space-y-2 text-gray-300 text-sm">
@@ -95,15 +95,15 @@ const services = [
 
               {/*scrolling animation */}
               {service.type === "code" && (
-                 <div className="border-t-2 rounded-xl pt-2  border-gray-800 ">
-                   <div className="border-t-2 rounded-xl pt-2  border-gray-800 ">
-                <div className="relative bg-black/40 rounded-lg border border-gray-700 mb-4 text-sm font-mono text-gray-400 h-40 overflow-hidden">
-                  <div className="absolute animate-scrollCode">
-                    {codeLines.map((line, idx) => (
-                      <div key={idx}>{line}</div>
-                    ))}
-                  </div>
-                  </div>
+                <div className="border-t-2 rounded-xl pt-2  border-gray-800 ">
+                  <div className="border-t-2 rounded-xl pt-2  border-gray-800 ">
+                    <div className="relative bg-black/40 rounded-lg border border-gray-700 mb-4 text-sm font-mono text-gray-400 h-40 overflow-hidden">
+                      <div className="absolute animate-scrollCode">
+                        {codeLines.map((line, idx) => (
+                          <div key={idx}>{line}</div>
+                        ))}
+                      </div>
+                    </div>
                   </div>
                 </div>
               )}

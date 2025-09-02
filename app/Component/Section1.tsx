@@ -16,10 +16,9 @@ const Section1 = () => {
           <source src="backgroundVideo.mp4" type="video/mp4" />
         </video>
 
-        {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/50" />
 
-        {/* Centered content */}
+        {/* Centercontent */}
         <div className="relative z-10 flex h-full items-center justify-center px-4">
           <div className="text-white text-center flex flex-col items-center gap-6">
             
@@ -45,7 +44,7 @@ const Section1 = () => {
               AI Automation for Modern Businesses Made Simple
             </p>
 
-            {/* Social Icons */}
+            {/* Icons */}
             <div className="flex justify-center items-center gap-4 text-gray-400 text-2xl">
               <i className="fa-brands fa-x-twitter"></i>
               <span className="text-gray-500">|</span>
