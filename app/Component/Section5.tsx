@@ -62,7 +62,7 @@ function Section5() {
               {/* Card */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-tr from-gray-800/30 to-gray-700/10 blur-xl opacity-40 group-hover:opacity-60 transition"></div>
 
-              {/* SEARCH */}
+              {/* SEARCH Card*/}
               {service.type === "search" && (
                 <div className="border-t-2 rounded-xl pt-2  border-gray-800 ">
                   <div className="border-t-2 rounded-xl pt-2 border-gray-800 ">
@@ -93,33 +93,89 @@ function Section5() {
 
               )}
 
-              {/*scrolling animation */}
+              {/*scrolling animation Card*/}
               {service.type === "code" && (
                 <div className="border-t-2 rounded-xl pt-2  border-gray-800 ">
                   <div className="border-t-2 rounded-xl pt-2  border-gray-800 ">
-                    <div className="relative bg-black/40 rounded-lg border border-gray-700 mb-4 text-sm font-mono text-gray-400 h-40 overflow-hidden">
-                      <div className="absolute animate-scrollCode">
-                        {codeLines.map((line, idx) => (
-                          <div key={idx}>{line}</div>
-                        ))}
+                    <div className="relative bg-black/40 rounded-xl border-t-2 border border-b-0 border-gray-800 mb-4 text-sm font-mono text-gray-400 h-60 overflow-hidden">
+
+                      <div className="flex items-center justify-between px-3 py-2 border-b-0  border-gray-700 bg-black/60">
+                        <div className="flex space-x-1">
+                          <span className="w-3 h-3 rounded-full bg-gray-600"></span>
+                          <span className="w-3 h-3 rounded-full bg-gray-600"></span>
+                          <span className="w-3 h-3 rounded-full bg-gray-600"></span>
+                        </div>
+
+                        <button className="flex items-center justify-between px-5 py-1 bg-gray-800 rounded-full text-xs text-gray-300 gap-2">
+                          <span>Search</span>
+                          <i>
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              height="14px"
+                              viewBox="0 -960 960 960"
+                              width="14px"
+                              fill="#FFFFFF"
+                            >
+                              <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+                            </svg>
+                          </i>
+                        </button>
+
+                        <button className="px-2 py-1 bg-gray-800 rounded text-xs text-gray-300">
+                          Code &lt;/&gt;
+                        </button>
+                      </div>
+
+                      <div className="relative w-80 px-4 h-40 bg-gradient-to-bl from-gray-800/100 to-black overflow-hidden">
+                        <div className="absolute animate-scrollCode">
+                          {codeLines.map((line, idx) => (
+                            <div key={idx} className="whitespace-pre text-gray-300">
+                              <span className="text-gray-500 mr-3">
+                                {String(idx + 1).padStart(2, "0")}
+                              </span>
+                              {line}
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               )}
 
-              {/* CHART TYPE */}
+
               {service.type === "chart" && (
-                <div className="flex justify-center items-center h-40">
-                  <div className="w-20 h-20 rounded-full border-2 border-gray-600 flex justify-center items-center bg-black/30">
-                    <BarChart3 className="w-10 h-10 text-gray-300 animate-pulse" />
+
+                <div className="relative flex bg-gradient-to-bl from-gray-800/100 to-black flex-col items-center rounded-xl border-gray-700 ps-15 pt-15">
+                  {/* main big circle */}
+                  <div className="relative flex justify-center mb-20 items-center h-30 w-30 rounded-full border-t-3 bg-black border border-gray-800 bg-black/30 translate-x-6 translate-y-6">
+                    <Sparkles className="w-10 h-10 text-gray-300" />
                   </div>
-                  <Sparkles className="w-6 h-6 text-gray-400 ml-2 animate-pulse" />
+
+                  {/* tilted line */}
+                  <div className="absolute top-23 right-40 w-21 h-2  bg-black border-t-1 border-b-1 border-gray-800 rotate-[33deg]"></div>
+
+                  {/* moving small circle 1 */}
+                  <div className="absolute top-14 right-59 w-5 border-t-2 border-gray-800 border h-5 rounded-full bg-black animate-ball"></div>
+
+                  {/* moving small circle 2 */}
+                  <div className="absolute top-18 right-53 w-5 border-t-2 border-gray-800 border h-5 rounded-full bg-black animate-ball2 "></div>
+
+                  {/* faded background bubbles */}
+                  <div className="absolute top-1 right-56 w-20 h-20 rounded-full border-t-3 bg-black border border-gray-600 opacity-40">
+                    <Sparkles className="w-6 h-6 absolute top-6 left-7 text-white" />
+                  </div>
+                  <div className="absolute top-30 right-65 w-9 h-9 rounded-full border-t-3 bg-black border border-gray-600 opacity-30"></div>
+                  
                 </div>
+
               )}
 
-              <h3 className="text-lg font-semibold mt-4">{service.title}</h3>
-              <p className="text-gray-400 text-sm mt-1">{service.description}</p>
+<h3 className="text-lg font-semibold mt-4">{service.title}</h3>
+<p className="text-gray-400 text-sm mt-1">{service.description}</p>
+
+
+
             </div>
           ))}
         </div>
@@ -129,3 +185,4 @@ function Section5() {
 }
 
 export default Section5
+

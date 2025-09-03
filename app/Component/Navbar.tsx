@@ -19,11 +19,11 @@ export default function Navbar() {
           <li><a href="#" className="hover:text-gray-300">Pricing</a></li>
           <li><a href="#" className="hover:text-gray-300">Blog</a></li>
           <li><a href="#" className="hover:text-gray-300">Contact</a></li>
-        </ul>
-
         <button className="border-1 flex gap-2 px-5 py-2 rounded-md  bg-gray-900 border-gray-800">
               <Sparkles className="w-5 h-5 text-grey-400" />
             Get Template</button>
+        </ul>
+
 
         {/* Mobile Menu Button */}
         <button
@@ -36,11 +36,14 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden mt-4 space-y-3 px-6">
+        <div className="md:hidden mt-4 space-y-3 ">
           <a href="#" className="block hover:text-gray-300">Home</a>
           <a href="#" className="block hover:text-gray-300">About</a>
           <a href="#" className="block hover:text-gray-300">Services</a>
           <a href="#" className="block hover:text-gray-300">Contact</a>
+            <button className="border-1 flex gap-2 px-5 py-2 rounded-md  bg-gray-900 border-gray-800">
+              <Sparkles className="w-5 h-5 text-grey-400" />
+            Get Template</button>
         </div>
       )}
     </nav>

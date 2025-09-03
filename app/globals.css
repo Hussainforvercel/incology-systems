@@ -34,6 +34,7 @@
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-50%);
   }
@@ -43,15 +44,53 @@
   animation: scrollCode 8s linear infinite;
 }
 
-.animation{
+.animation {
   margin-top: 283px !important;
 }
 
-.mainIconAni{
-  margin-top: 25%  !important;
+.mainIconAni {
+  margin-top: 25% !important;
   padding: 15px;
 }
 
-.blur{
-   filter: blur(1px)
+.blur {
+  filter: blur(1px)
+}
+
+@keyframes scrollCode {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.animate-scrollCode {
+  display: inline-block;
+  animation: scrollCode 15s linear infinite;
+}
+
+
+@keyframes ballMove {
+  0%   { transform: translateX(0) translateY(-1px); }
+  100% { transform: rotate(33deg) translateX(100px) translateY(-1px); }
+}
+
+
+@keyframes ballMove2 {
+  0%   { transform:rotate(33deg) translateX(80px) translateY(-1px); }
+  100% { transform:translateY(-1px); }
+}
+
+
+.animate-ball {
+  animation: ballMove 2s linear infinite alternate-reverse ;
+}
+
+
+.animate-ball2 {
+  animation: ballMove2 2s linear infinite alternate ;
+  animation-delay: 1s; 
 }

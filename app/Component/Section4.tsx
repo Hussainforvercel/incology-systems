@@ -29,8 +29,8 @@ const Section4 = () => {
     <section className="relative w-full bg-black border-gray-900 text-white pb-20 pt-10">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Badge */}
-        <div className="inline-block px-4 py-1 rounded-full border border-gray-700 text-xs uppercase tracking-wide text-gray-300 ">
-          PROCESS
+        <div className="inline-block px-4 py-1 my-6 rounded-full border border-gray-700 text-xs uppercase tracking-wide text-gray-300 ">
+    <i className="fa-solid fa-star g-2 text-grey-400 me-2"></i>PROCESS
         </div>
 
         {/* Heading */}

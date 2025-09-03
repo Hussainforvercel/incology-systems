@@ -7,7 +7,7 @@ const Section3 = () => {
                 <div className="max-w-6xl mx-auto px-6 text-center">
                     {/* Badge */}
                     <div className="inline-block px-4 py-1 rounded-full border border-gray-700 text-xs uppercase tracking-wide text-gray-300 mb-6">
-                        FEATURES
+                        <i className="fa-solid fa-star g-2 text-grey-400 me-2"></i>  FEATURES
                     </div>
 
                     {/* Heading */}
