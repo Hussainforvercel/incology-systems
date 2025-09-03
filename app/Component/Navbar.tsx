@@ -10,7 +10,7 @@ export default function Navbar() {
     <nav className="bg-black text-white px-15 py-4 border-b border-gray-800">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="text-xl font-bold">Landio</a>
+         <img width={120} src="https://framerusercontent.com/images/04vJJZ3D2ponPv6rzLBq6sf2PZU.svg" alt="" />
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 border border-gray-900 shadow-md px-6 rounded-full py-2">
@@ -19,10 +19,11 @@ export default function Navbar() {
           <li><a href="#" className="hover:text-gray-300">Pricing</a></li>
           <li><a href="#" className="hover:text-gray-300">Blog</a></li>
           <li><a href="#" className="hover:text-gray-300">Contact</a></li>
-        <button className="border-1 flex gap-2 px-5 py-2 rounded-md  bg-gray-900 border-gray-800">
-              <Sparkles className="w-5 h-5 text-grey-400" />
-            Get Template</button>
         </ul>
+            <button className="hidden sm:flex gap-2 px-5 py-2 rounded-md bg-gray-900 border border-gray-800 items-center">
+  <Sparkles className="w-5 h-5 text-gray-400" />
+  Get Template
+</button>
 
 
         {/* Mobile Menu Button */}

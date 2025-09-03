@@ -1,109 +1,137 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
+import { motion, useAnimation, useInView, Variants } from "framer-motion";
 
-const Section4 = () => {
+interface CardContent {
+  number: string;
+  title: string;
+  desc: string;
+  img: string;
+}
+
+const Section4: React.FC = () => {
   const [step, setStep] = useState(0);
-  const content = [
+
+  const content: CardContent[] = [
     {
       number: "01",
       title: "Discover & Analyze",
       desc: "We audit your existing workflows, tools, and customer data to uncover inefficiencies and automation opportunities. Every system is mapped for clarity.",
-      img: "https://framerusercontent.com/images/LMV9IYKI2TkgMh5KmQhbeIV2A.png?width=1602&height=1049"
+      img: "https://framerusercontent.com/images/LMV9IYKI2TkgMh5KmQhbeIV2A.png?width=1602&height=1049",
     },
     {
       number: "02",
       title: "Design & Implement",
       desc: "We create tailored AI workflows that align with your goals. Our team builds, tests, and deploys smart systems that integrate into your operations seamlessly.",
-      img: "https://framerusercontent.com/images/NlShinj3SRLiU2GpzFKbH8loPs.png?width=1808&height=1124"
+      img: "https://framerusercontent.com/images/NlShinj3SRLiU2GpzFKbH8loPs.png?width=1808&height=1124",
     },
-
     {
       number: "03",
       title: "Optimize & Scale",
       desc: "We track key metrics and continuously refine performance using real-time insights. As your business evolves, your automation grows with it.",
-      img: "https://framerusercontent.com/images/66vg6GiqexKxWsR2ms684XFtAQ.png?width=1536&height=1012"
+      img: "https://framerusercontent.com/images/66vg6GiqexKxWsR2ms684XFtAQ.png?width=1536&height=1012",
     },
   ];
 
+  //  animation
+  const ref = useRef<HTMLDivElement | null>(null);
+  const isInView = useInView(ref, { once: true });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) controls.start("visible");
+  }, [isInView, controls]);
+
+  const container: Variants = {
+    hidden: {},
+    visible: { transition: { staggerChildren: 0.2 } },
+  };
+
+  const childText: Variants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+  };
+
+  const childImage: Variants = {
+    hidden: { opacity: 0, scale: 0.95 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
   return (
-    <section className="relative w-full bg-black border-gray-900 text-white pb-20 pt-10">
-      <div className="max-w-6xl mx-auto px-6 text-center">
+    <section ref={ref} className="relative w-full bg-black text-white pb-20 pt-10">
+      <motion.div variants={container} initial="hidden" animate={controls} className="max-w-6xl mx-auto px-6 text-center">
+
         {/* Badge */}
-        <div className="inline-block px-4 py-1 my-6 rounded-full border border-gray-700 text-xs uppercase tracking-wide text-gray-300 ">
-    <i className="fa-solid fa-star g-2 text-grey-400 me-2"></i>PROCESS
-        </div>
+        <motion.div
+          variants={childText}
+          className="inline-block px-4 py-1 my-6 rounded-full border border-gray-900 text-xs uppercase tracking-wide text-gray-300"
+        >
+          <i className="fa-solid fa-star g-2 text-grey-400 me-2"></i>PROCESS
+        </motion.div>
 
         {/* Heading */}
-        <h2 className="text-3xl sm:text-5xl font-bold mb-4">
-          Our Simple &{" "}
-          <span className="italic font-serif text-gray-200">Smart Process</span>
-        </h2>
+        <motion.h2 variants={childText} className="text-3xl sm:text-5xl font-bold mb-4">
+          Our Simple & <span className="italic font-serif text-gray-200">Smart Process</span>
+        </motion.h2>
 
         {/* Subheading */}
-        <p className="text-gray-400 max-w-2xl mx-auto mb-10">
-          Everything you need to collaborate, create, and scale, all in one
-          place.
-        </p>
+        <motion.p variants={childText} className="text-gray-400 max-w-2xl mx-auto mb-10">
+          Everything you need to collaborate, create, and scale, all in one place.
+        </motion.p>
 
-        <div className="border border-t-2 border-gray-800 border-b-gray-900 rounded-xl p-4 pb-4">
-          <section className="relative w-full pt-0 text-white rounded-xl bg-black  border-gray-700  to-transparent">
-            {/* Buttons */}
-            <div className="flex gap-4 mb-8">
-              <button
-                onClick={() => setStep(0)}
-                className={`flex-1 py-3 rounded-xl border border-gray-700 transition ${step === 1
-                    ? "bg-gray-800 text-white"
-                    : "bg-[#111] text-gray-400 hover:bg-gray-800"
-                  }`}
-              >
-                STEP 1
-              </button>
-              <button
-                onClick={() => setStep(1)}
-                className={`flex-1 py-3 rounded-xl border border-gray-700 transition ${step === 2
-                    ? "bg-gray-800 text-white"
-                    : "bg-[#111] text-gray-400 hover:bg-gray-800"
-                  }`}
-              >
-                STEP 2
-              </button>
-              <button
-                onClick={() => setStep(2)}
-                className={`flex-1 py-3 rounded-xl border border-gray-700 transition ${step === 3
-                    ? "bg-gray-800 text-white"
-                    : "bg-[#111] text-gray-400 hover:bg-gray-800"
-                  }`}
-              >
-                STEP 3
-              </button>
-            </div>
+        {/*  buttons */}
+        <motion.div variants={container} className="flex gap-4 mb-8 justify-center">
+          {content.map((_, idx) => (
+            <motion.button
+              key={idx}
+              onClick={() => setStep(idx)}
+              variants={childText}
+              className={`flex-1 py-3 rounded-xl border border-gray-700 transition ${
+                step === idx ? "bg-gray-800 text-white" : "bg-[#111] text-gray-400 hover:bg-gray-800"
+              }`}
+            >
+              STEP {idx + 1}
+            </motion.button>
+          ))}
+        </motion.div>
 
-            <div className="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-10 items-center">
-              {/* LEFT IMAGE */}
-              <div className="flex justify-center">
-                <img
-                  width={600}
-                  height={600}
-                  src={content[step].img}
-                  alt={content[step].title}
-                  className="rounded-2xl shadow-lg"
-                />
-              </div>
+        {/* Big Card */}
+        <motion.div
+          key={step} 
+          initial="hidden"
+          animate="visible"
+          variants={container}
+          className="border border-t-2 border-gray-800 border-b-gray-900 rounded-xl p-4 pb-4"
+        >
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            {/* Left Image */}
+            <motion.div variants={childImage} className="flex justify-center">
+              <img
+                width={600}
+                height={600}
+                src={content[step].img}
+                alt={content[step].title}
+                className="rounded-2xl shadow-lg"
+              />
+            </motion.div>
 
-              {/* RIGHT SIDE */}
-              <div className="text-start">
-                <p className="text-gray-400 mb-3 text-lg">
-                  {content[step].number}
-                </p>
-                <h5 className="text-4xl mb-4">{content[step].title}</h5>
-                <p className="text-gray-400 leading-relaxed text-lg">
-                  {content[step].desc}
-                </p>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div>
+            {/* Right Text */}
+            <motion.div variants={container} className="text-start">
+              <motion.p variants={childText} className="text-gray-400 mb-3 text-lg">
+                {content[step].number}
+              </motion.p>
+              <motion.h5 variants={childText} className="text-4xl mb-4">
+                {content[step].title}
+              </motion.h5>
+              {content[step].desc.split(". ").map((line, idx) => (
+                <motion.p key={idx} variants={childText} className="text-gray-400 leading-relaxed text-lg mb-2">
+                  {line}.
+                </motion.p>
+              ))}
+            </motion.div>
+          </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

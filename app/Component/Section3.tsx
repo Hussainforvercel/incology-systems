@@ -1,122 +1,96 @@
-import React from 'react'
+"use client";
 
-const Section3 = () => {
-    return (
-        <>
-            <section className="relative bg-gradient-to-t  from-gray-700/30 to-black  w-full bg-black border-b-2 border-gray-800 text-white py-20">
-                <div className="max-w-6xl mx-auto px-6 text-center">
-                    {/* Badge */}
-                    <div className="inline-block px-4 py-1 rounded-full border border-gray-700 text-xs uppercase tracking-wide text-gray-300 mb-6">
-                        <i className="fa-solid fa-star g-2 text-grey-400 me-2"></i>  FEATURES
-                    </div>
+import React, { useRef } from "react";
+import { motion, useAnimation, useInView, Variants } from "framer-motion";
 
-                    {/* Heading */}
-                    <h2 className="text-3xl sm:text-5xl font-bold mb-4">
-                        All features in <span className="italic font-serif text-gray-200">one place</span>
-                    </h2>
+const Section3: React.FC = () => {
+  const cards = [...Array(6)];
 
-                    {/* Subheading */}
-                    <p className="text-gray-400 max-w-2xl mx-auto mb-14">
-                        Everything you need to automate operations, boost productivity
-                    </p>
+  const container: Variants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.2, 
+      },
+    },
+  };
 
-                    <div className="grid mb-7 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                        {/* Card 1 */}
-                        <div className="p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900  transition">
-                            <div className="flex pt-8 pb-15 rounded-2xl border border-t-2 bg-gradient-to-bl  from-gray-700/30 to-black  border-gray-900  justify-center mb-6">
-                                <div className="flex  items-center bg-[#12151E] gap-5 p-4 mt-4 rounded-xl border border-t-2  border-gray-800 cursor-pointer transition-transform duration-500 hover:scale-115 ">
-                                    <i className="fa-solid fa-diagram-project text-3xl text-gray-400"></i>
-                                    <i className="fa-solid fa-diagram-project text-3xl text-gray-400"></i>
-                                </div>
-                            </div>
-                            <h3 className="text-lg font-semibold mb-3">Workflow Automation</h3>
-                            <p className="text-gray-400 text-sm">
-                                Automate complex business processes to boost speed, clarity, and efficiency.
-                            </p>
-                        </div>
+  const child: Variants = {
+    hidden: { opacity: 0, y: 50, scale: 0.95 },
+    visible: { opacity: 1, y: 0, scale: 1, transition: { duration: 0.6, ease: "easeOut" } },
+  };
 
-                        {/* Card 2 */}
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const controls = useAnimation();
 
-                        <div className="p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900  transition">
-                            <div className="flex pt-8 pb-15 rounded-2xl border border-t-2 bg-gradient-to-bl  from-gray-700/30 to-black  border-gray-900  justify-center mb-6">
-                                <div className="flex  items-center bg-[#12151E] gap-5 p-4 mt-4 rounded-xl border border-t-2  border-gray-800 cursor-pointer transition-transform duration-500 hover:scale-115 ">
-                                    <i className="fa-solid fa-sliders text-3xl text-gray-400"></i>
-                                    <i className="fa-solid fa-sliders text-3xl text-gray-400"></i>
-                                </div>
-                            </div>
-                            <h3 className="text-lg font-semibold mb-3">Custom AI Solutions</h3>
-                            <p className="text-gray-400 text-sm">
-                                Build tailored AI systems that align with your business goals and challenges.
-                            </p>
-                        </div>
+  React.useEffect(() => {
+    if (isInView) controls.start("visible");
+  }, [isInView, controls]);
 
-                        {/* Card 3 */}
+  return (
+    <section className="relative bg-black bg-gradient-to-t from-gray-700/30 to-black w-full border-b-2 border-gray-800 text-white py-20">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+        {/* Badge */}
+        <motion.div
+          initial="hidden"
+          animate={controls}
+          variants={child}
+          className="inline-block px-4 py-1 rounded-full border border-gray-700 text-xs uppercase tracking-wide text-gray-300 mb-6"
+        >
+          <i className="fa-solid fa-star g-2 text-grey-400 me-2"></i> FEATURES
+        </motion.div>
 
-                        <div className="p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900 transition">
-                            <div className="flex pt-8 pb-15 rounded-2xl border border-t-2 bg-gradient-to-bl  from-gray-700/30 to-black  border-gray-900 justify-center mb-6">
-                                <div className="flex  items-center bg-[#12151E] gap-5 p-4 mt-4 rounded-xl border border-t-2  border-gray-800 cursor-pointer transition-transform duration-500 hover:scale-115 ">
-                                    <i className="fa-solid fa-robot text-3xl text-gray-400"></i>
-                                    <i className="fa-solid fa-robot text-3xl text-gray-400"></i>
-                                </div>
-                            </div>
-                            <h3 className="text-lg font-semibold mb-3">AI Assistant</h3>
-                            <p className="text-gray-400 text-sm">
-                                Deploy intelligent virtual agents to streamline tasks.
-                            </p>
-                        </div>
-                    </div>
+        {/* Heading */}
+        <motion.h2
+          initial="hidden"
+          animate={controls}
+          variants={child}
+          className="text-3xl sm:text-5xl font-bold mb-4"
+        >
+          All features in <span className="italic font-serif text-gray-200">one place</span>
+        </motion.h2>
 
-                    {/* down cards */}
+        {/* Subheading */}
+        <motion.p
+          initial="hidden"
+          animate={controls}
+          variants={child}
+          className="text-gray-400 max-w-2xl mx-auto mb-14"
+        >
+          Everything you need to automate operations, boost productivity
+        </motion.p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-                        {/* Card 1 */}
-                        <div className="p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900 transition">
-                            <div className="flex pt-8 pb-15 rounded-2xl border border-t-2 bg-gradient-to-bl  from-gray-700/30 to-black  border-gray-900  justify-center mb-6">
-                                <div className="flex  items-center bg-[#12151E] gap-5 p-4 mt-4 rounded-xl border border-t-2  border-gray-800 cursor-pointer transition-transform duration-500 hover:scale-115 ">
-                                    <i className="fa-solid fa-diagram-project text-3xl text-gray-400"></i>
-                                    <i className="fa-solid fa-diagram-project text-3xl text-gray-400"></i>
-                                </div>
-                            </div>
-                            <h3 className="text-lg font-semibold mb-3">Workflow Automation</h3>
-                            <p className="text-gray-400 text-sm">
-                                Automate complex business processes to boost speed, clarity, and efficiency.
-                            </p>
-                        </div>
-
-                        {/* Card 2 */}
-
-                        <div className="p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900 transition">
-                            <div className="flex pt-8 pb-15 rounded-2xl border border-t-2 bg-gradient-to-bl  from-gray-700/30 to-black  border-gray-900  justify-center mb-6">
-                                <div className="flex  items-center bg-[#12151E] gap-5 p-4 mt-4 rounded-xl border border-t-2  border-gray-800 cursor-pointer transition-transform duration-500 hover:scale-115 ">
-                                    <i className="fa-solid fa-sliders text-3xl text-gray-400"></i>
-                                    <i className="fa-solid fa-sliders text-3xl text-gray-400"></i>
-                                </div>
-                            </div>
-                            <h3 className="text-lg font-semibold mb-3">Custom AI Solutions</h3>
-                            <p className="text-gray-400 text-sm">
-                                Build tailored AI systems that align with your business goals and challenges.
-                            </p>
-                        </div>
-
-                        {/* Card 3 */}
-
-                        <div className="p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900 transition">
-                            <div className="flex pt-8 pb-15 rounded-2xl border border-t-2 bg-gradient-to-bl  from-gray-700/30 to-black  border-gray-900 justify-center mb-6">
-                                <div className="flex  items-center bg-[#12151E] gap-5 p-4 mt-4 rounded-xl border border-t-2  border-gray-800 cursor-pointer transition-transform duration-500 hover:scale-115 ">
-                                    <i className="fa-solid fa-robot text-3xl text-gray-400"></i>
-                                    <i className="fa-solid fa-robot text-3xl text-gray-400"></i>
-                                </div>
-                            </div>
-                            <h3 className="text-lg font-semibold mb-3">AI Assistant</h3>
-                            <p className="text-gray-400 text-sm">
-                                Deploy intelligent virtual agents to streamline tasks.
-                            </p>
-                        </div>
-                    </div>
+        {/* Cards */}
+        <motion.div
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={container}
+          className="flex flex-wrap justify-center gap-8 mb-7"
+        >
+          {cards.map((_, idx) => (
+            <motion.div
+              key={idx}
+              variants={child}
+              className="flex flex-col w-full sm:w-[48%] md:w-[31%] p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900"
+            >
+              <div className="flex pt-8 pb-15 rounded-2xl border border-t-2 bg-gradient-to-bl from-gray-700/30 to-black border-gray-900 justify-center mb-6">
+                <div className="flex items-center bg-[#12151E] gap-5 p-4 mt-4 rounded-xl border border-t-2 border-gray-800">
+                  <i className="fa-solid fa-diagram-project text-3xl text-gray-400"></i>
+                  <i className="fa-solid fa-diagram-project text-3xl text-gray-400"></i>
                 </div>
-            </section>
-        </>
-    )
-}
+              </div>
+              <h3 className="text-lg font-semibold mb-3">Feature Title</h3>
+              <p className="text-gray-400 text-sm">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo.
+              </p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
 
-export default Section3
+export default Section3;

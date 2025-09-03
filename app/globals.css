@@ -29,7 +29,7 @@
 
 
 
-/* Smooth vertical scrolling animation for code */
+
 @keyframes scrollCode {
   0% {
     transform: translateY(0);
