@@ -2,7 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView, Variants } from "framer-motion";
 
-const Section7: React.FC = () => {
+const ReachOut: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const controls = useAnimation();
   const inView = useInView(ref, { once: true });
@@ -113,4 +113,4 @@ const Section7: React.FC = () => {
   );
 };
 
-export default Section7;
+export default ReachOut;

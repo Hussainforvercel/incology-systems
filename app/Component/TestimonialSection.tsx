@@ -16,7 +16,7 @@ const child: Variants = {
   visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const Section2: React.FC = () => {
+const TestimonialSection: React.FC = () => {
   const ref = useRef<HTMLDivElement | null>(null);
   const isInView = useInView(ref, { once: true });
   const controls = useAnimation();
@@ -68,4 +68,4 @@ const Section2: React.FC = () => {
   );
 };
 
-export default Section2;
+export default TestimonialSection;

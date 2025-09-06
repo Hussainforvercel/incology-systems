@@ -56,7 +56,7 @@ const cardVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const Section5: React.FC = () => {
+const ServiceSection2: React.FC = () => {
   return (
     <section className="bg-black  text-white pb-20">
       <div className="max-w-7xl mx-auto px-6">
@@ -105,7 +105,7 @@ const Section5: React.FC = () => {
                                 </svg>
                               </i>
                               {item}
-                              <i className="ps-16">
+                              <i className="ps-10">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
                                   height="24px"
@@ -181,4 +181,4 @@ const Section5: React.FC = () => {
   );
 };
 
-export default Section5;
+export default ServiceSection2;

@@ -9,7 +9,7 @@ interface CardContent {
   img: string;
 }
 
-const Section4: React.FC = () => {
+const ProcessSection: React.FC = () => {
   const [step, setStep] = useState(0);
 
   const content: CardContent[] = [
@@ -136,4 +136,4 @@ const Section4: React.FC = () => {
   );
 };
 
-export default Section4;
+export default ProcessSection;

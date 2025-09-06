@@ -43,7 +43,7 @@ const features = [
   },
 ];
 
-const Section8 = () => {
+const ServiceSection = () => {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
@@ -220,4 +220,4 @@ const Section8 = () => {
   );
 };
 
-export default Section8;
+export default ServiceSection;

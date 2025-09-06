@@ -31,7 +31,7 @@ const cardVariant: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-const Section6: React.FC = () => {
+const ComparisionSection: React.FC = () => {
   return (
     <section className="relative bg-[#0B0B0E] bg-gradient-to-t from-gray-700/10 to-black text-white py-20">
       {/* Top & Bottom Lines */}
@@ -147,7 +147,7 @@ const Section6: React.FC = () => {
   );
 };
 
-export default Section6;
+export default ComparisionSection;
 
 
 

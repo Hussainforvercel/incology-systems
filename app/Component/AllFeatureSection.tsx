@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { motion, useAnimation, useInView, Variants } from "framer-motion";
 
-const Section3: React.FC = () => {
+const AllFeatureSection: React.FC = () => {
   const cards = [...Array(6)];
 
   const container: Variants = {
@@ -93,4 +93,4 @@ const Section3: React.FC = () => {
   );
 };
 
-export default Section3;
+export default AllFeatureSection;

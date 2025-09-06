@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Section1 = () => {
+const Slider = () => {
   return (
     <section className="relative h-[130vh] w-full overflow-hidden">
       {/* Background video */}
@@ -80,4 +80,4 @@ const Section1 = () => {
   );
 };
 
-export default Section1;
+export default Slider;
