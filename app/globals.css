@@ -29,11 +29,16 @@
 
 
 
+<<<<<<< HEAD
 
+=======
+/* Smooth vertical scrolling animation for code */
+>>>>>>> 41514c4190f7b76c51a19131a467d473eb9f779d
 @keyframes scrollCode {
   0% {
     transform: translateY(0);
   }
+<<<<<<< HEAD
 
   100% {
     transform: translateY(-50%);
@@ -93,4 +98,20 @@
 .animate-ball2 {
   animation: ballMove2 2s linear infinite alternate ;
   animation-delay: 1s; 
+=======
+  100% {
+    transform: translateY(-50%);
+  }
+>>>>>>> 41514c4190f7b76c51a19131a467d473eb9f779d
+}
+
+.animate-scrollCode {
+  animation: scrollCode 8s linear infinite;
+}
+
+
+@layer utilities {
+  .animate-spin-slow {
+    animation: spin 6s linear infinite;
+  }
 }
