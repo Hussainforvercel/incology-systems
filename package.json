@@ -11,10 +11,9 @@
   "dependencies": {
     "bootstrap": "^5.3.8",
     "framer-motion": "^12.23.12",
-<<<<<<< HEAD
-=======
+
     "gsap": "^3.13.0",
->>>>>>> 41514c4190f7b76c51a19131a467d473eb9f779d
+
     "lucide-react": "^0.542.0",
     "next": "15.5.2",
     "react": "19.1.0",
@@ -27,17 +26,16 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-<<<<<<< HEAD
+
     "autoprefixer": "^10.4.21",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.12",
-=======
+
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
     "tailwindcss": "^4",
->>>>>>> 41514c4190f7b76c51a19131a467d473eb9f779d
     "typescript": "^5"
   }
 }

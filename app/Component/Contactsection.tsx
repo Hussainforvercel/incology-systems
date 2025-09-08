@@ -1,6 +1,3 @@
-
-
-
 "use client";
 import { useState } from "react";
 import Image from "next/image";
@@ -11,17 +8,17 @@ const cards = [
   {
     title: "Emily's E-commerce Success",
     desc: "Emily transformed her sales with AI-driven strategies.",
-    img: "/images/emily.jpg",
+    img: "/images/randomperson3.webp",
   },
   {
     title: "David's Marketing Growth",
     desc: "David scaled his marketing campaigns using automation.",
-    img: "/images/david.jpg",
+    img: "/images/randomperson2.jpeg",
   },
   {
     title: "Sophia's SaaS Impact",
     desc: "Sophia improved her SaaS retention and engagement.",
-    img: "/images/sophia.jpg",
+    img: "/images/randomperson1.jpeg",
   },
 ];
 
