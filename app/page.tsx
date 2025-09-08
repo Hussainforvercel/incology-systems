@@ -1,5 +1,5 @@
 
-import Image from "next/image";
+// import Image from "next/image";
 // inshara
 import Navbar from "./Component/Navbar";
 import Section1 from "./Component/Section1";
@@ -17,25 +17,33 @@ import ReviewSection from "./Component/Reviews";
 import TeamSection from "./Component/OurAmazinteam";
 import Carousel from "./Component/Carousel";
 
+import WordpressSection from "./Component/Wordpressportfolio";
+import MernSection from "./Component/Mernportfolio";
+import MobileSection from "./Component/Mobileportfolio";
+
+
 export default function Home() {
   return (
     <>
-
+      <MernSection/>
+      <WordpressSection />
+      <MobileSection/>
       <Navbar />
       <Section1 />
       <Section2 />
       <BenefitsSection />
       <Section3 />
       <Section4 />
-        <Carousel/>
+      <Carousel />
       <Section5 />
-    
-      
+
+
       <Integrations />
       <PricingSection />
       <FAQSection />
-       <ReviewSection/>
-       <TeamSection/>
+      <ReviewSection />
+      <TeamSection />
+
     </>
-)
+  )
 }
