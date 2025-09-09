@@ -10,6 +10,7 @@ import Carousel from "./Component/Carousel";
 import WordpressSection from "./Component/Wordpressportfolio";
 import MernSection from "./Component/Mernportfolio";
 import MobileSection from "./Component/Mobileportfolio";
+import ContactSection from "./Component/Contactsection";
 
 
 export default function Home() {
