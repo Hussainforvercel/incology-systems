@@ -6,7 +6,6 @@ import ServiceSection2 from "./Component/ServiceSection2";
 import ComparisionSection from "./Component/ComparisionSection";
 import ReachOut from "./Component/ReachOut";
 import ServiceSection from "./Component/ServiceSection";
-
 import PricingSection from "./Component/Pricing";
 import FAQSection from "./Component/FAQsection";
 import Integrations from "./Component/Integrations";
@@ -19,12 +18,9 @@ import WordpressSection from "./Component/Wordpressportfolio";
 import MernSection from "./Component/Mernportfolio";
 import MobileSection from "./Component/Mobileportfolio";
 
-
-
 function Home() {
   return (
     <>
-
       <Slider />
       <TestimonialSection />
       <BenefitsSection />
@@ -40,8 +36,6 @@ function Home() {
       <ComparisionSection />
       <TeamSection />
       <ReachOut />
-
-
 
       <MernSection />
       <WordpressSection />
