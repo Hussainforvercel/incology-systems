@@ -227,7 +227,7 @@ export default function TeamSection() {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   return (
-    <section ref={sectionRef} className="relative bg-[#04070D] text-white py-20 px-6">
+    <section ref={sectionRef} className="relative text-white py-20 px-6">
       <div className="max-w-6xl mx-auto text-center">
         {/* TOP BUTTON */}
         <motion.div

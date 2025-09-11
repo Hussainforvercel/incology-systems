@@ -38,21 +38,23 @@ function StatBox({ number, label }: StatBoxProps) {
 
 const AboutPage: React.FC = () => {
     return (
-        <div className="bg-black text-white px-10">
-            <section className="relative w-full h-[50vh] flex flex-col justify-center items-center text-center">
+        <div className="relative text-white px-10">
+         
+          <section className="relative mb-5  w-full h-[80vh] flex flex-col justify-center items-center text-center">
                 {/* Background Image */}
-                <div className="absolute bg-black inset-0">
+                <div className="absolute inset-0">
                     <img
-                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9mUniOFLmWdxt2J6VsZIJWBnSJ2Fh6rtowg&s"
+                        src="https://c4.wallpaperflare.com/wallpaper/834/602/559/computer-keyboards-wallpaper-preview.jpg"
                         alt="About Banner"
-                        className="object-cover  mt-5 h-[50vh] w-[100%] brightness-50"
+                        className="object-cover h-[80vh] w-[100%] brightness-50"
                     />
                 </div>
 
                 {/* Text Content */}
                 <div className="relative  z-10">
-                    <h1 className="text-6xl font-bold text-white">About Us</h1>
-                    <p className="text-gray-300 mt-4 text-lg tracking-wide">Home / About Us</p>
+                    <h5 className="text-xl text-white">Hire us now</h5>
+                    <h1 className="text-5xl  text-white">We Are Always Ready To <br /> Take A Perfect Shot</h1>
+                    <button className="border-1 bg-white text-black mt-5 px-5 py-2 rounded-full">Get Started</button>
                 </div>
             </section>
 
@@ -89,7 +91,7 @@ const AboutPage: React.FC = () => {
             </section>
 
             {/* Skills Section */}
-            <section className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+            <section className="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-2 gap-10 items-center">
                 {/* Left Side: Skills */}
                 <div>
                     <h3 className="text-3xl font-bold mb-4">Our Skills</h3>
@@ -122,23 +124,12 @@ const AboutPage: React.FC = () => {
                 </div>
             </section>
 
-            <section className="relative mt-20  w-full h-[80vh] flex flex-col justify-center items-center text-center">
-                {/* Background Image */}
-                <div className="absolute inset-0">
-                    <img
-                        src="https://c4.wallpaperflare.com/wallpaper/834/602/559/computer-keyboards-wallpaper-preview.jpg"
-                        alt="About Banner"
-                        className="object-cover h-[80vh] w-[100%] brightness-50"
-                    />
-                </div>
+            <div className="absolute -bottom-2 left-0 w-full mb-3">
+        <div className="relative w-full h-px bg-gray-800">
+          <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
 
-                {/* Text Content */}
-                <div className="relative  z-10">
-                    <h5 className="text-xl text-white">Hire us now</h5>
-                    <h1 className="text-5xl  text-white">We Are Always Ready To <br /> Take A Perfect Shot</h1>
-                    <button className="border-1 bg-white text-black mt-5 px-5 py-2 rounded-full">Get Started</button>
-                </div>
-            </section>
         </div>
     );
 };

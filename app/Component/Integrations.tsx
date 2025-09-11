@@ -198,7 +198,7 @@ export default function IntegrationsSection() {
   }, []);
 
   return (
-    <section className="relative bg-[#04070D] text-white min-h-screen flex justify-center items-center px-6">
+    <section className="relative text-white min-h-screen flex justify-center items-center px-6">
       <div className="max-w-[1100px] w-full text-center">
         {/* Heading */}
         <motion.div

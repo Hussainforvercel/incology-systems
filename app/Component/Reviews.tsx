@@ -233,7 +233,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="bg-[#04070D] text-white py-16 px-4 relative">
+    <section className="text-white py-16 px-4 relative">
       <div className="max-w-6xl mx-auto text-center mb-14">
         {/* Reviews Button */}
         <motion.button

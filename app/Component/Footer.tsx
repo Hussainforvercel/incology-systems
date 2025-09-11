@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaTwitter, FaDribbble } from "react-icons/fa";
+import Link from "next/link";
 
 function Footer() {
     return (
@@ -8,7 +9,7 @@ function Footer() {
                 <div className="flex w-full items-center mt-5 justify-between">
                     {/* Logo */}
                     <div>
-                        <img width={120} src="https://framerusercontent.com/images/04vJJZ3D2ponPv6rzLBq6sf2PZU.svg" alt="" />
+                          <Link href="/"> <img width={200} src="./incologo.png" alt="" /></Link>
                     </div>
                     <div className="flex gap-5 mt-2">
                         <a href="#"><FaFacebookF className="text-gray w-6 h-6 transition" /></a>

@@ -18,7 +18,7 @@ const ReachOut: React.FC = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.25, 
+        staggerChildren: 0.25,
       },
     },
   };
@@ -34,7 +34,7 @@ const ReachOut: React.FC = () => {
   };
 
   return (
-    <section className="bg-black bg-gradient-to-t border-b-2 border-gray-700 from-gray-700/50 to-black h-[110vh] w-full">
+    <section className="h-[110vh] w-full">
       {/* Centered content */}
       <div
         ref={ref}
@@ -108,7 +108,14 @@ const ReachOut: React.FC = () => {
             landio@support.com
           </motion.p>
         </motion.div>
+      <div className="absolute -bottom-2 left-0 w-full mb-3">
+        <div className="relative w-full h-px bg-white/10">
+          <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
+        </div>
       </div>
+      </div>
+
+
     </section>
   );
 };

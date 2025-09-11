@@ -248,7 +248,7 @@ export default function PricingSection() {
   const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section ref={ref} className="relative bg-[#04070D] text-white py-10 px-2">
+    <section ref={ref} className="relative text-white py-10 px-2">
       <div className="max-w-5xl mx-auto text-center">
         {/* Pricing Badge */}
         <motion.div

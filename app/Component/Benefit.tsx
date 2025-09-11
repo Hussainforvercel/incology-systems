@@ -150,7 +150,7 @@ const AnimatedFeatures = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative bg-[#04070D] text-white py-26 px-4">
+    <section ref={ref} className="relative text-white py-26 px-4">
       <div className="max-w-6xl mx-auto">
         {/* -------- Heading + Button -------- */}
         <motion.div
@@ -268,6 +268,11 @@ const AnimatedFeatures = () => {
             </p>
           </motion.div>
         </motion.div>
+      </div>
+          <div className="absolute -bottom-2 left-0 w-full mb-3">
+        <div className="relative w-full h-px bg-white/10">
+          <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
+        </div>
       </div>
     </section>
   );

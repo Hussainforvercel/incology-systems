@@ -353,7 +353,7 @@ export default function StackedCarousel() {
   }, []);
 
   return (
-    <section className="relative bg-[#04070D] text-white py-16 px-4 sm:px-6 overflow-hidden">
+    <section className="relative text-white py-16 px-4 sm:px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         {/* Heading with animation */}
         <motion.div

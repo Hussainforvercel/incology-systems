@@ -29,7 +29,7 @@ const AllFeatureSection: React.FC = () => {
   }, [isInView, controls]);
 
   return (
-    <section className="relative bg-black bg-gradient-to-t from-gray-700/30 to-black w-full border-b-2 border-gray-800 text-white py-20">
+    <section className="relative w-full text-white py-20">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Badge */}
         <motion.div
@@ -88,6 +88,11 @@ const AllFeatureSection: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
+      </div>
+       <div className="absolute -bottom-3 left-0 w-full mb-3">
+        <div className="relative w-full h-px bg-white/10">
+          <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
+        </div>
       </div>
     </section>
   );

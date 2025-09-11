@@ -58,7 +58,7 @@ const ProcessSection: React.FC = () => {
   };
 
   return (
-    <section ref={ref} className="relative w-full bg-black text-white pb-20 pt-10">
+    <section ref={ref} className="relative w-full text-white pb-20 pt-10">
       <motion.div variants={container} initial="hidden" animate={controls} className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Badge */}
@@ -132,6 +132,11 @@ const ProcessSection: React.FC = () => {
           </div>
         </motion.div>
       </motion.div>
+       <div className="absolute -bottom-2 left-0 w-full mb-3">
+        <div className="relative w-full h-px bg-white/10">
+          <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
     </section>
   );
 };

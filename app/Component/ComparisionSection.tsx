@@ -33,10 +33,9 @@ const cardVariant: Variants = {
 
 const ComparisionSection: React.FC = () => {
   return (
-    <section className="relative bg-[#0B0B0E] bg-gradient-to-t from-gray-700/10 to-black text-white py-20">
+    <section className="relative text-white py-20">
       {/* Top & Bottom Lines */}
-      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-gray-800 to-black"></div>
-      <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-black via-gray-800 to-black"></div>
+      
 
       <div className="max-w-6xl mx-auto px-4 text-center">
         {/* Comparison Badge */}
@@ -143,6 +142,13 @@ const ComparisionSection: React.FC = () => {
           </motion.div>
         </div>
       </div>
+
+ <div className="absolute -bottom-3 left-0 w-full mb-3">
+        <div className="relative w-full h-px bg-white/10">
+          <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
+
     </section>
   );
 };
