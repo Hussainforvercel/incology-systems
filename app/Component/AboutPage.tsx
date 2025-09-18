@@ -39,8 +39,8 @@ function StatBox({ number, label }: StatBoxProps) {
 const AboutPage: React.FC = () => {
     return (
         <div className="relative text-white px-10">
-         
-          <section className="relative mb-5  w-full h-[80vh] flex flex-col justify-center items-center text-center">
+
+            <section className="relative mb-5  w-full h-[80vh] flex flex-col justify-center items-center text-center">
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <img
@@ -78,11 +78,16 @@ const AboutPage: React.FC = () => {
                         We Always Make The Best
                     </h2>
                     <p className="text-gray-400 leading-relaxed">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas id
-                        odio placerat, convallis neque quis, interdum leo. Nam hendrerit
-                        urna nibh, eget sagittis erat varius non. Duis ut varius augue.
-                        odio placerat, convallis neque quis, interdum leo. Nam hendrerit
-                        urna nibh, eget sagittis erat varius non. Duis ut varius augue.
+                        At Incology Systems, we believe technology should do more than just function—it should
+                        empower businesses, simplify operations, and unlock growth. We are a full-service software
+                        agency specializing in custom web applications, mobile apps, digital design, and IT
+                        solutions.
+                        Our mission is to help companies—from startups to enterprises—leverage modern technology to
+                        stay competitive in a fast-changing digital world. We take pride in our ability to design and
+                        develop end-to-end systems that are secure, scalable, and user-friendly, while ensuring your
+                        brand leaves a lasting impression.
+                        With a team of passionate developers, designers, and digital strategists, we deliver solutions
+                        tailored to your unique business needs.
                     </p>
                     <button className="mt-6 px-6 py-3 rounded-full bg-white text-black font-semibold w-fit hover:bg-gray-200 transition">
                         Contact Us
@@ -101,9 +106,9 @@ const AboutPage: React.FC = () => {
                     </p>
 
                     <div className="space-y-6">
-                        <SkillBar title="Video Editing" percent={85} />
-                        <SkillBar title="Videography" percent={90} />
-                        <SkillBar title="Branding" percent={77} />
+                        <SkillBar title="Web Development" percent={90} />
+                        <SkillBar title="Mobile App Development" percent={85} />
+                        <SkillBar title="Graphic designing" percent={77} />
                     </div>
                 </div>
 
@@ -125,10 +130,10 @@ const AboutPage: React.FC = () => {
             </section>
 
             <div className="absolute -bottom-2 left-0 w-full mb-3">
-        <div className="relative w-full h-px bg-gray-800">
-          <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
-        </div>
-      </div>
+                <div className="relative w-full h-px bg-gray-800">
+                    <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
+                </div>
+            </div>
 
         </div>
     );

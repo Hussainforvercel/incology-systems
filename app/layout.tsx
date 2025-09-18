@@ -2,7 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./Component/Navbar";
 import Footer from "./Component/Footer";
+import { Libre_Baskerville } from "next/font/google";
 
+const libreBaskervilleItalic = Libre_Baskerville({
+  weight: ["400", "700"],
+  style: "italic",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,17 +22,22 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* ✅ Font Awesome CDN link yahan dalna hai */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+          integrity="sha512-u9fCz+jGkV/0eMcbYxXZ5FZVny4NBaE9hM7FqQ9U9lM0+olV7U2f2jD05WpO7C8AQ0+H1FwKfVJknWZ+2wPw2g=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+      </head>
       <body>
-
 
         <Navbar />
         {children}
         <Footer />
-
-
         
-
-
       </body>
     </html>
   );
