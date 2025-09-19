@@ -16,7 +16,7 @@ export default function MobileDevelopment() {
             <section className="relative w-full h-[70vh] flex items-center justify-center">
                 <div className="absolute inset-0">
                     <img
-                        src="https://i.pinimg.com/originals/05/cd/9a/05cd9a0bb4c72e5ba98ece031987955d.gif"
+                        src="https://i.pinimg.com/originals/22/c8/87/22c887ab8cd375d078f0f2178e400374.gif"
                         alt="Mobile Development Background"
                         className="w-full h-full object-cover blur-sm"
                     />

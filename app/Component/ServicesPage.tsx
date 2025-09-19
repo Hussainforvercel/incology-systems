@@ -31,35 +31,26 @@ const ServicesPage = () => {
       title: "UI/UX & Graphic Design",
       icon: "fa-pen",
       desc: "Creative, user-focused, and visually striking designs for web and mobile, we craft seamless experiences aligned with your brand identity.",
-      link: "/ServicesProvide/WebDev"
+      link: "/ServicesProvide/UI-UX"
     },
     {
       title: "Digital Marketing & SEO",
       icon: "fa-ranking-star",
       desc: "Targeted, data-driven, and growth-focused marketing strategies, we boost your online presence and drive measurable business results.",
-      link: "/ServicesProvide/WebDev"
+      link: "/ServicesProvide/Digital-Marketing"
     },
     {
       title: "WordPress & Shopify",
       icon: "fa-brands fa-shopify",
       desc: "Custom, flexible, and conversion-focused online stores and websites, we build high-performance platforms tailored to your brands.",
-      link: "/ServicesProvide/WebDev"
+      link: "/ServicesProvide/WordPress-Shopify"
     },
     {
       title: "Blockchain Solutions",
       icon: "fa-cubes",
       desc: "Smart, resilient, and fully decentralized blockchain solutions, we craft seamless experiences that enhance performance.",
-      link: "/ServicesProvide/WebDev"
+      link: "/ServicesProvide/Blockchain-Solutions "
     },
-  ];
-
-  const steps = [
-    { title: "Discovery & Planning", desc: "Understand goals, define requirements, and build a roadmap." },
-    { title: "Design & Prototyping", desc: "Craft UI/UX wireframes, mockups, and architecture." },
-    { title: "Development", desc: "Agile sprint cycles with full-stack coding and integrations." },
-    { title: "Testing & QA", desc: "Manual and automated tests for performance, usability, and security." },
-    { title: "Deployment", desc: "Hosting, cloud setup, CI/CD pipelines." },
-    { title: "Support & Optimization", desc: "Post-launch monitoring, updates, and scaling." },
   ];
 
   return (
@@ -139,45 +130,7 @@ const ServicesPage = () => {
           
         </div>
 
-
-
-        {/* development start */}
-
-        <section className=" pt-10">
-          <h2
-            className="text-3xl md:text-4xl font-bold text-center mb-12 text-white"
-            style={{ fontFamily: "Valty DEMO" }}
-          >
-            Our Development Process
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8  px-6 md:px-20">
-            {steps.map((step, idx) => (
-              <motion.div
-                key={idx}
-                className="flex flex-col items-center border-t-3 border-gray-500  text-center bg-gradient-to-br from-gray-700/40 to-gray-950 border-gray-900  p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
-                initial={{ opacity: 0, y: 0 }}       // Start state
-                whileInView={{ opacity: 1, y: 0 }}    // Animate when in view
-                transition={{
-                  duration: 0.6,
-                  delay: idx * 0.2,                 // Staggered effect for each card
-                  ease: "easeOut",
-                }}
-                viewport={{
-                  once: true, amount: 0.2
-                }}
-              >
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gray-800 mb-4 text-white font-semibold text-lg">
-                  {idx + 1}
-                </div>
-                <h3 className="text-lg font-bold text-xl text-white mb-2" style={{ fontFamily: "Valty DEMO" }}>{step.title}</h3>
-                <p className="text-gray-300">{step.desc}</p>
-              </motion.div>
-              
-            ))}
-          </div>
-          
-        </section>
+{/* for contact */}
 
         <section className="text-center py-20">
           <h2 className="text-3xl font-bold mb-4" style={{ fontFamily: "Valty DEMO" }}>Have a Project in Mind?</h2>
