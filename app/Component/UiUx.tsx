@@ -64,17 +64,17 @@ const UiUx = () => {
 
           <ul className="space-y-6 list-none">
 
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 py-6 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}> Wireframing & Prototyping: </span>  Visualize your app before development begins</p>
             </li>
 
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 py-6 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>Accessibility First:   </span>  We ensure inclusivity and usability across devices and audiences. </p>
             </li>
 
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 py-6 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}> User-Centric Design: </span> Crafting flows and interfaces that minimize friction and maximize
                 engagement. </p>
@@ -100,24 +100,24 @@ const UiUx = () => {
 
           <ul className="space-y-6 list-none">
 
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>Brand Identity:</span> <br /> Logo design, typography, and brand guidelines.</p>
             </li>
 
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}> Marketing Collateral:</span> <br />  Posters, brochures, and banners that elevate your campaigns.
               </p>
             </li>
 
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>Social Media Assets: </span> <br /> Eye-catching post designs for Instagram, LinkedIn, Facebook, and
                 more.</p>
             </li>
 
-            <li className="border border-t-3 rounded-xl px-4 mb-6 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 mb-15 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>Tools We Use:</span> <br />   Figma, Adobe Illustrator, Photoshop, Adobe XD.</p>
             </li>

@@ -11,7 +11,9 @@ const libreBaskerville = Libre_Baskerville({
 export default function WebDevelopment() {
   return (
     <>
-      <section className="relative w-full h-[70vh] flex items-center justify-center">
+   <div
+  >
+       <section className="relative w-full h-[70vh] flex items-center justify-center">
         {/* Background Image with grayscale */}
         <div className="absolute inset-0">
           <img
@@ -46,7 +48,7 @@ export default function WebDevelopment() {
 
       {/* Service start */}
 
-      <section className="relative py-16 bg-gray-950 text-white">
+      <section className="relative py-16 text-white">
         <div className="max-w-6xl mx-auto px-6 gap-10 items-center">
           {/* Left Content */}
           <div className="flex flex-col pb-10 justify-center items-center ">
@@ -61,23 +63,23 @@ export default function WebDevelopment() {
 
           {/* Right List */}
           <ul className=" relative space-y-6">
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>Custom Web Applications:</span> <br /> Internal dashboards, e-commerce solutions, or SaaS platforms aligned with your goals.</p>
             </li>
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}> API Development:</span> <br /> Powerful REST APIs & GraphQL endpoints to connect services, apps, and devices seamlessly.</p>
             </li>
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}> Database Design & Management:</span> <br /> Expertise in MongoDB, MySQL & PostgreSQL for secure and structured growth.</p>
             </li>
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}> Modern Frameworks & Tools:</span> <br /> Node.js, Express, NestJS, Prisma ORM for scalable backends.</p>
             </li>
-            <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+            <li className="border  bg-gradient-to-bl from-gray-700/40 to-blackb-15 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
               <CheckCircle className="text-green-500 w-8 h-8 " />
               <p className="text-md"> <span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>Scalability & Security:</span> <br /> Authentication systems, payment gateways, and high-performance apps.</p>
             </li>
@@ -90,6 +92,7 @@ export default function WebDevelopment() {
           </div>
         </div>
       </section>
+   </div>
 
     </>
   )

@@ -49,7 +49,7 @@ const DigitalMarketing = () => {
 
             {/* Service start */}
 
-            <section className="relative py-16 bg-gray-950 text-white">
+            <section className="relative py-16 text-white">
                 <div className="max-w-6xl mx-auto px-6 gap-10 items-center">
                     {/* Left Content */}
                     <div className="flex flex-col pb-10 justify-center items-center ">
@@ -64,26 +64,26 @@ visibility and engagement.
 
                     {/* Right List */}
                     <ul className=" relative space-y-6">
-                        <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+                        <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
                             <CheckCircle className="text-green-500 w-8 h-8 " />
                             <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>SEO (Search Engine Optimization): </span> <br /> Keyword research, technical optimization, and
                                 content strategies that improve your rankings. </p>
                         </li>
-                        <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+                        <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
                             <CheckCircle className="text-green-500 w-8 h-8 " />
                             <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>Social Media Marketing:</span> <br /> Paid and organic campaigns that build awareness and drive engagement. </p>
                         </li>
-                        <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+                        <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
                             <CheckCircle className="text-green-500 w-8 h-8 " />
                             <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}> Social Media Management:</span> <br /> Content planning, posting schedules, and analytics
                                 reporting to keep your audience engaged. </p>
                         </li>
-                           <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+                           <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
                             <CheckCircle className="text-green-500 w-8 h-8 " />
                             <p className="text-md"> <span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>Analytics & Insights: </span> <br /> Using Google Analytics, Search Console, and SEMrush, we track
                                 performance and fine-tune strategies</p>
                         </li>
-                        <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gray-900  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
+                        <li className="border border-t-3 mb-15 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
                             <CheckCircle className="text-green-500 w-8 h-8 " />
                             <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}> Google Ads:</span> <br /> Pay-per-click campaigns tailored for maximum ROI.</p>
                         </li>
