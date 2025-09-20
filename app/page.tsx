@@ -40,7 +40,7 @@ function Home() {
       <ComparisionSection />
       <TeamSection />
       <ReachOut />
-
+      <ContactSection/>
     </>
   );
 }
