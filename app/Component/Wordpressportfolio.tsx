@@ -23,7 +23,7 @@ const portfolioItems = [
 
 export default function WordpressSection() {
   return (
-    <section className="relative bg-[#04070D] text-white py-20 px-4">
+    <section className="relative text-white py-20 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">

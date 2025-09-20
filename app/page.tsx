@@ -1,4 +1,10 @@
-
+import Slider from "./Component/Slider";
+import TestimonialSection from "./Component/TestimonialSection";
+import AllFeatureSection from "./Component/AllFeatureSection";
+import ProcessSection from "./Component/ProcessSection";
+import ComparisionSection from "./Component/ComparisionSection";
+import ReachOut from "./Component/ReachOut";
+import ServiceSection from "./Component/ServiceSection";
 import PricingSection from "./Component/Pricing";
 import FAQSection from "./Component/FAQsection";
 import Integrations from "./Component/Integrations";
@@ -12,21 +18,31 @@ import MernSection from "./Component/Mernportfolio";
 import MobileSection from "./Component/Mobileportfolio";
 import ContactSection from "./Component/Contactsection";
 
-
-export default function Home() {
+function Home() {
   return (
     <>
-      <MernSection/>
+      <Slider />
+      <TestimonialSection />
+
+      <MernSection />
       <WordpressSection />
-      <MobileSection/>
+      <MobileSection />
+
       <BenefitsSection />
+      <ServiceSection />
+      <AllFeatureSection />
+      <ProcessSection />
       <Carousel />
       <Integrations />
+      <ReviewSection />
       <PricingSection />
       <FAQSection />
-      <ReviewSection />
+      <ComparisionSection />
       <TeamSection />
+      <ReachOut />
 
     </>
-  )
+  );
 }
+
+export default Home
