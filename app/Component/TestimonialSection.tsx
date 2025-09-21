@@ -32,7 +32,7 @@ const TestimonialSection: React.FC = () => {
   ];
 
   return (
-    <section ref={ref} className="relative border-t-1 border-gray-800  w-full text-white py-20">
+    <section ref={ref} className="relative border-t-1 border-gray-800  w-full text-white py-20 bg-[#04070D]">
       
       <motion.div
         variants={container}

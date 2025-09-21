@@ -96,7 +96,7 @@ export default function MobileSection() {
   ];
 
   return (
-    <section className="relative text-white py-20 px-4">
+    <section className="relative text-white py-20 px-4 bg-[#04070D]">
       <div className="max-w-6xl mx-auto">
         {/* -------- Heading -------- */}
         <div className="text-center mb-14">

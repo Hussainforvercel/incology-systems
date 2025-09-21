@@ -151,7 +151,7 @@ const ServiceSection = () => {
   return (
     <>
 
-      <div className="relative pt-8 pb-15 px-4 text-white text-center">
+      <div className="relative pt-8 pb-15 px-4 text-white text-center bg-[#04070D]">
 
         
         {/* TEXT SECTION */}

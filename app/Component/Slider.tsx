@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Slider = () => {
   return (
-    <section className="relative h-[130vh] w-full overflow-hidden">
+    <section className="relative h-[130vh] w-full overflow-hidden bg-[#04070D]">
       {/* Background video */}
       <video
         className="absolute filter grayscale brightness-50 inset-0 h-full w-full object-cover"

@@ -38,7 +38,7 @@ function StatBox({ number, label }: StatBoxProps) {
 
 const AboutPage: React.FC = () => {
     return (
-        <div className="relative text-white px-10">
+        <div className="relative text-white px-10 bg-[#04070D]">
          
           <section className="relative mb-5  w-full h-[80vh] flex flex-col justify-center items-center text-center">
                 {/* Background Image */}

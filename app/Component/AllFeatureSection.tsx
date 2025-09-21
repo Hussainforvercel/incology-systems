@@ -29,7 +29,7 @@ const AllFeatureSection: React.FC = () => {
   }, [isInView, controls]);
 
   return (
-    <section className="relative w-full text-white py-20">
+    <section className="relative w-full text-white py-20 bg-[#04070D]">
       <div className="max-w-6xl mx-auto px-6 text-center">
         {/* Badge */}
         <motion.div

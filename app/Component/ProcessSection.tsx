@@ -58,7 +58,7 @@ const ProcessSection: React.FC = () => {
   };
 
   return (
-    <section ref={ref} className="relative w-full text-white pb-20 pt-10">
+    <section ref={ref} className="relative w-full text-white pb-20 pt-10 bg-[#04070D]">
       <motion.div variants={container} initial="hidden" animate={controls} className="max-w-6xl mx-auto px-6 text-center">
 
         {/* Badge */}

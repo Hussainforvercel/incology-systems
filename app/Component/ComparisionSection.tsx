@@ -33,7 +33,7 @@ const cardVariant: Variants = {
 
 const ComparisionSection: React.FC = () => {
   return (
-    <section className="relative text-white py-20">
+    <section className="relative text-white py-20 bg-[#04070D]">
       {/* Top & Bottom Lines */}
       
 

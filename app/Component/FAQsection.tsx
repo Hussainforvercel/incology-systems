@@ -46,7 +46,7 @@ export default function FAQSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative text-white py-16 px-6 "
+      className="relative text-white py-16 px-6 bg-[#04070D]"
     >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
