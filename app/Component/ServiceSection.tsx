@@ -2,14 +2,20 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation, useInView, Variants } from "framer-motion";
 import {
-  Mail,
+  SiReact,
+  SiNodedotjs,
+  SiFlutter,
+  SiMongodb,
+  SiExpress,
+  SiJavascript,
+  SiNextdotjs,
+} from "react-icons/si";
+import {
   User,
-  CheckCircle,
   Repeat,
   Sparkles,
-  Heart,
-  Star,
-  ShoppingCart,
+  CheckCircle
+
 } from "lucide-react";
 
 const codeLines = [
@@ -84,13 +90,13 @@ const features = [
     title: "Automated Workflows",
     desc: "Boost efficiency across teams with smart automation. Build intelligent workflows that automate multi-step processes across tools and platforms.",
     icons: [
-      { icon: <Mail />, top: "15%", left: "24%" },
-      { icon: <User />, top: "10%", left: "63%" },
-      { icon: <CheckCircle />, top: "20%", left: "83%" },
-      { icon: <Repeat />, top: "50%", left: "70%" },
-      { icon: <ShoppingCart />, top: "50%", left: "30%" },
-      { icon: <Heart />, top: "45%", left: "8%" },
-      { icon: <Star />, top: "15%", left: "8%" },
+      { icon: <SiReact />, top: "15%", left: "24%" },
+      { icon: <SiFlutter />, top: "10%", left: "63%" },
+      { icon: <SiNextdotjs />, top: "20%", left: "83%" },
+      { icon: <SiMongodb />, top: "50%", left: "70%" },
+      { icon: <SiNodedotjs />, top: "50%", left: "30%" },
+      { icon: <SiExpress />, top: "45%", left: "8%" },
+      { icon: <SiJavascript />, top: "15%", left: "8%" },
     ],
   },
 ];
@@ -153,7 +159,7 @@ const ServiceSection = () => {
 
       <div className="relative pt-8 pb-15 px-4 text-white text-center">
 
-        
+
         {/* TEXT SECTION */}
         <motion.div
           ref={textRef}
@@ -171,10 +177,10 @@ const ServiceSection = () => {
 
           <motion.h2
             variants={fadeUp}
-            className="text-3xl md:text-4xl font-bold mt-4"
+            className="text-3xl md:text-4xl  font-bold mt-4" style={{fontFamily: "Valty DEMO"}}
           >
-            Smarter Services,{" "}
-            <span className="italic text-gray-300">Built with AI</span>
+         Future Ready Software Agency Driving <br /> Your Business Forward  {" "}
+           
           </motion.h2>
 
           <motion.p
@@ -387,19 +393,19 @@ const ServiceSection = () => {
                 <p className="text-gray-400 text-sm mt-1">{service.description}</p>
               </motion.div>
             ))}
-            
+
           </div>
-          
+
         </div>
 
-      <div className="absolute -bottom-2 left-0 w-full mb-3">
-        <div className="relative w-full h-px bg-gray-900">
-          <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
+        <div className="absolute -bottom-2 left-0 w-full mb-3">
+          <div className="relative w-full h-px bg-gray-900">
+            <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
+          </div>
         </div>
-      </div>
 
       </div>
-       
+
 
 
     </>

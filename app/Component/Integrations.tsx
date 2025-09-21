@@ -145,15 +145,24 @@ import {
   FaInstagram,
   FaPaypal,
 } from "react-icons/fa6";
-import { SiNotion, SiSlack, SiGoogledrive } from "react-icons/si";
+
+
+import {   SiReact,
+  SiNodedotjs,
+  SiFlutter,
+  SiMongodb,
+  SiExpress,
+  SiJavascript,
+  SiNextdotjs,
+  SiTypescript, } from "react-icons/si";
 import { Plug } from "lucide-react";
 import gsap from "gsap";
 import { motion, Variants } from "framer-motion";
 
 // Icons ka data
-const row1 = [FaXTwitter, FaFacebook, FaPinterest, SiGoogledrive, FaInstagram];
-const row2 = [SiNotion, SiSlack, FaPaypal, SiGoogledrive, FaInstagram];
-const row3 = [FaInstagram, FaFacebook, FaPinterest, SiNotion, SiGoogledrive];
+const row1 = [SiJavascript, SiNextdotjs, SiTypescript, SiExpress, FaInstagram];
+const row2 = [SiTypescript, SiReact, SiNodedotjs, SiMongodb, SiFlutter];
+const row3 = [SiFlutter, SiMongodb, SiReact, SiJavascript, SiNextdotjs];
 
 // Text animation variants (with TS typing)
 const textVariant: Variants = {

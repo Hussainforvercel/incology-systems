@@ -51,11 +51,11 @@ const Slider = () => {
 
           {/* Text */}
           <p className="text-xs">NEW GEN AI AUTOMATION PARTNER</p>
-          <h1 className="text-4xl sm:text-7xl font-bold leading-tight">
-            Automate Smarter. Grow <br /> Faster. <em>With AI.</em>
+          <h1 className="text-4xl sm:text-7xl font-bold leading-tight" style={{fontFamily:"Valty DEMO"}}>
+           From Concept To Launch,<br />We Deliver Software  <br />That Works.
           </h1>
           <p className="max-w-xl text-sm sm:text-base text-gray-200">
-            AI Automation for Modern Businesses Made Simple
+           Your Partner in smart, Reliable Software,
           </p>
 
           {/* Icons */}
@@ -76,6 +76,13 @@ const Slider = () => {
           </div>
         </div>
       </motion.div>
+
+
+      <div className="absolute -bottom-2 left-0 w-full mb-3">
+        <div className="relative w-full h-px bg-white-900">
+          <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
+        </div>
+      </div>
     </section>
   );
 };

@@ -16,6 +16,7 @@ import Carousel from "./Component/Carousel";
 import WordpressSection from "./Component/Wordpressportfolio";
 import MernSection from "./Component/Mernportfolio";
 import MobileSection from "./Component/Mobileportfolio";
+import ServicesPage from "./Component/ServicesPage";
 
 function Home() {
   return (
@@ -34,7 +35,7 @@ function Home() {
       <Carousel />
       <Integrations />
       <ReviewSection />
-      <PricingSection />
+      {/* <PricingSection /> */}
       <FAQSection />
       <ComparisionSection />
       <TeamSection />

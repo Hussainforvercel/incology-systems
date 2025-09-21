@@ -217,20 +217,20 @@ const cardVariant: Variants = {
 };
 
 const Testimonials = () => {
-  const marqueeRef = useRef<HTMLDivElement | null>(null);
+  // const marqueeRef = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.to(".marquee-track", {
-        x: "-50%",
-        repeat: -1,
-        duration: 30,
-        ease: "linear",
-      });
-    }, marqueeRef);
+  // useEffect(() => {
+  //   const ctx = gsap.context(() => {
+  //     gsap.to(".marquee-track", {
+  //       x: "-50%",
+  //       repeat: -1,
+  //       duration: 30,
+  //       ease: "linear",
+  //     });
+  //   }, marqueeRef);
 
-    return () => ctx.revert();
-  }, []);
+  //   return () => ctx.revert();
+  // }, []);
 
   return (
     <section className="text-white py-16 px-4 relative">
@@ -308,8 +308,8 @@ const Testimonials = () => {
       </div>
 
       {/* Running Marquee */}
-      <div className="relative overflow-hidden mt-14">
-        {/* Gradient fade effect */}
+      {/* <div className="relative overflow-hidden mt-14">
+        
         <div className="pointer-events-none absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-[#04070D] to-transparent z-10"></div>
         <div className="pointer-events-none absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-[#04070D] to-transparent z-10"></div>
 
@@ -325,7 +325,7 @@ const Testimonials = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* White Shadow Separation */}
       <div className="absolute -bottom-2 left-0 w-full">

@@ -82,8 +82,8 @@ const ComparisionSection: React.FC = () => {
           >
             <div className="flex items-center justify-center gap-1 mb-6">
               <img
-                width={80}
-                src="https://framerusercontent.com/images/04vJJZ3D2ponPv6rzLBq6sf2PZU.svg"
+                width={120}
+                src="./incologo.png"
                 alt=""
               />
             </div>
@@ -121,7 +121,7 @@ const ComparisionSection: React.FC = () => {
                 <path d="M480-80q-33 0-56.5-23.5T400-160v-320q0-33 23.5-56.5T480-560h320q33 0 56.5 23.5T880-480v320q0 33-23.5 56.5T800-80H480Zm0-80h320v-320H480v320Zm-240-80v-400q0-33 23.5-56.5T320-720h400v80H320v400h-80ZM80-400v-400q0-33 23.5-56.5T160-880h400v80H160v400H80Zm400 240v-320 320Z" />
               </svg>
 
-              <h3 className="text-xl font-semibold italic">Others</h3>
+              <h3 className="text-3xl font-semibold italic">Others</h3>
             </div>
 
             <div className="rounded-2xl border border-t-3 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black shadow-lg p-6 text-left">

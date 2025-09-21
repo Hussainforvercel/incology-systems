@@ -1,8 +1,9 @@
 "use client";
-import React from 'react'
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { Libre_Baskerville } from "next/font/google";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, ChevronDown } from "lucide-react";
+
 
 const libreBaskerville = Libre_Baskerville({
     weight: ["400", "700"],
@@ -10,16 +11,49 @@ const libreBaskerville = Libre_Baskerville({
 });
 
 const DigitalMarketing = () => {
+
+    const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const toggleItem = (index: number) => {
+        setOpenIndex(openIndex === index ? null : index);
+    };
+    const marketingServices = [
+        {
+            title: "SEO (Search Engine Optimization)",
+            desc: "Keyword research, technical optimization, and content strategies that improve your rankings.",
+        },
+        {
+            title: "Social Media Marketing",
+            desc: "Paid and organic campaigns that build awareness and drive engagement.",
+        },
+        {
+            title: "Social Media Management",
+            desc: "Content planning, posting schedules, and analytics reporting to keep your audience engaged.",
+        },
+        {
+            title: "Analytics & Insights",
+            desc: "Using Google Analytics, Search Console, and SEMrush, we track performance and fine-tune strategies.",
+        },
+        {
+            title: "Google Ads",
+            desc: "Pay-per-click campaigns tailored for maximum ROI.",
+        },
+    ];
     return (
         <>
             <section className="relative w-full h-[70vh] flex items-center justify-center">
                 {/* Background Image with grayscale */}
                 <div className="absolute inset-0">
-                    <img
-                        src="https://globaleducation.s3.ap-south-1.amazonaws.com/globaledu/gif/digital-marketing.gif"
-                        alt="Background"
-                        className="w-full h-full object-cover blur-sm"
-                    />
+                    {/* Background video */}
+                    <video
+                        className="absolute filter grayscale brightness-50 inset-0 h-full w-full object-cover"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        poster="/fallback.jpg"
+                    >
+                        <source src="backgroundVideo.mp4" type="video/mp4" />
+                    </video>
                     {/* Dark overlay for readability */}
                     <div className="absolute inset-0 bg-black/40"></div>
                 </div>
@@ -57,37 +91,55 @@ const DigitalMarketing = () => {
                             Our Expertise
                         </h2>
                         <p className="text-gray-300 text-center ">
-                           We dont just run campaigns—we craft sustainable growth systems that ensure long-term 
-visibility and engagement. 
+                            We dont just run campaigns—we craft sustainable growth systems that ensure long-term
+                            visibility and engagement.
                         </p>
                     </div>
 
-                    {/* Right List */}
-                    <ul className=" relative space-y-6">
-                        <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
-                            <CheckCircle className="text-green-500 w-8 h-8 " />
-                            <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>SEO (Search Engine Optimization): </span> <br /> Keyword research, technical optimization, and
-                                content strategies that improve your rankings. </p>
-                        </li>
-                        <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
-                            <CheckCircle className="text-green-500 w-8 h-8 " />
-                            <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>Social Media Marketing:</span> <br /> Paid and organic campaigns that build awareness and drive engagement. </p>
-                        </li>
-                        <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
-                            <CheckCircle className="text-green-500 w-8 h-8 " />
-                            <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}> Social Media Management:</span> <br /> Content planning, posting schedules, and analytics
-                                reporting to keep your audience engaged. </p>
-                        </li>
-                           <li className="border border-t-3 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
-                            <CheckCircle className="text-green-500 w-8 h-8 " />
-                            <p className="text-md"> <span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}>Analytics & Insights: </span> <br /> Using Google Analytics, Search Console, and SEMrush, we track
-                                performance and fine-tune strategies</p>
-                        </li>
-                        <li className="border border-t-3 mb-15 rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black  hover:scale-[1.02] transition duration-300 flex items-start gap-3">
-                            <CheckCircle className="text-green-500 w-8 h-8 " />
-                            <p className="text-md"><span className="font-bold text-xl tracking-wide" style={{ fontFamily: "Valty DEMO" }}> Google Ads:</span> <br /> Pay-per-click campaigns tailored for maximum ROI.</p>
-                        </li>
-                     
+                    <ul className="relative space-y-6">
+                        {marketingServices.map((marketingServices, index) => (
+                            <li
+                                key={index}
+                                className="border rounded-xl px-4 py-4 border-gray-800 bg-gradient-to-bl from-gray-700/40 to-black hover:scale-[1.02] transition duration-300 cursor-pointer"
+                            >
+                                {/* Title Row */}
+                                <div
+                                    className="flex items-start gap-3 justify-between"
+                                    onClick={() => toggleItem(index)}
+                                >
+                                    <div className="flex gap-3">
+                                        <CheckCircle className="text-white w-8 h-8" />
+                                        <span
+                                            className="font-bold text-xl tracking-wide"
+                                            style={{ fontFamily: "Valty DEMO" }}
+                                        >
+                                            {marketingServices.title}
+                                        </span>
+                                    </div>
+                                    <motion.div
+                                        animate={{ rotate: openIndex === index ? 180 : 0 }}
+                                        transition={{ duration: 0.3 }}
+                                    >
+                                        <ChevronDown className="w-5 h-5 text-gray-400" />
+                                    </motion.div>
+                                </div>
+
+                                {/* Description Dropdown */}
+                                <AnimatePresence>
+                                    {openIndex === index && (
+                                        <motion.div
+                                            initial={{ opacity: 0, height: 0 }}
+                                            animate={{ opacity: 1, height: "auto" }}
+                                            exit={{ opacity: 0, height: 0 }}
+                                            transition={{ duration: 0.3 }}
+                                            className="mt-1 ml-11 text-gray-300"
+                                        >
+                                            {marketingServices.desc}
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </li>
+                        ))}
                     </ul>
                 </div>
 
