@@ -76,13 +76,6 @@ const Slider = () => {
           </div>
         </div>
       </motion.div>
-
-
-      <div className="absolute -bottom-2 left-0 w-full mb-3">
-        <div className="relative w-full h-px bg-white-900">
-          <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
-        </div>
-      </div>
     </section>
   );
 };

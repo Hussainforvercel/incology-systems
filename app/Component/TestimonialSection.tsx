@@ -1,126 +1,46 @@
-// "use client";
-// import React, { useEffect, useRef } from "react";
-// import gsap from "gsap";
-// const logos = [
-//   "./logo1.svg",
-//   "/images/logo2.png",
-//   "/images/logo3.png",
-//   "/images/logo4.png",
-//   "/images/logo5.png",
-// ];
-
-// const TestimonialSection = () => {
-
-//   const marqueeRef = useRef<HTMLDivElement | null>(null);
-
-//   useEffect(() => {
-//     const ctx = gsap.context(() => {
-//       gsap.to(".marquee-track", {
-//         x: "-50%",
-//         repeat: -1,
-//         duration: 30,
-//         ease: "linear",
-//       });
-//     }, marqueeRef);
-
-//     return () => ctx.revert();
-//   }, []);
-
-//   return (
-//     <>
-// <section className="relative">
-  
-  
-//   <div className="relative overflow-hidden mt-14 pb-20">
-//         {/* Gradient fade effect */}
-//         <div className="pointer-events-none absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-[#04070D] to-transparent z-10"></div>
-//         <div className="pointer-events-none absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-[#04070D] to-transparent z-10"></div>
-
-//         <div ref={marqueeRef} className="flex whitespace-nowrap overflow-hidden">
-//           <div className="flex gap-16 marquee-track">
-//             {logos.concat(logos, logos).map((logo, i) => (
-//               <span
-//                 key={i}
-//                 className="text-gray-400 text-xl font-semibold flex items-center"
-//               >
-//                 {logo}
-//               </span>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-
-
-//        <div className="absolute -bottom-2 left-0 w-full mb-3">
-//         <div className="relative w-full h-px bg-white-900">
-//           <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
-//         </div>
-//       </div>
-// </section>
-
-//     </>
-//   )
-// }
-
-// export default TestimonialSection
-
-   
-
 "use client";
-import React, { useEffect, useRef } from "react";
-import gsap from "gsap";
-
-const logos = [
-  "/logo1.svg",
-  "/logo2.png",
-  "/logo3.png",
-  "/logo4.png",
-  "/logo5.png",
-];
+import React from "react";
+import { Marquee } from "@/components/ui/marquee";
 
 const TestimonialSection = () => {
-  const marqueeRef = useRef<HTMLDivElement | null>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.to(".marquee-track", {
-        x: "-50%",
-        repeat: -1,
-        duration: 30,
-        ease: "linear",
-      });
-    }, marqueeRef);
-
-    return () => ctx.revert();
-  }, []);
+  const logos = [
+    "logo1.svg",
+    "logo2.svg",
+    "logo3.svg",
+    "logo4.png",
+    "logo5.png",
+    "logo6.webp",
+    "logo7.svg",
+    "logo8.png",
+    "logo9.png",
+    "logo10.png",
+  ];
 
   return (
-    <section className="relative">
-      <div className="relative overflow-hidden mt-14 pb-20">
-        {/* Gradient fade effect */}
-        <div className="pointer-events-none absolute top-0 left-0 w-32 h-full bg-gradient-to-r from-[#04070D] to-transparent z-10"></div>
-        <div className="pointer-events-none absolute top-0 right-0 w-32 h-full bg-gradient-to-l from-[#04070D] to-transparent z-10"></div>
-
-        <div ref={marqueeRef} className="flex whitespace-nowrap overflow-hidden">
-          <div className="flex gap-16 marquee-track">
-            {logos.concat(logos, logos).map((logo, i) => (
-              <img
-                key={i}
-                src={logo}
-                alt={`Logo ${i + 1}`}
-                className="h-12 w-auto object-contain opacity-80 hover:opacity-100 transition"
-              />
-            ))}
+    <div className="relative pt-10 pb-10 flex w-full flex-col items-center justify-center overflow-hidden">
+      {/* Marquee with uniform gap */}
+      <Marquee pauseOnHover className="[--duration:20s] flex gap-16">
+        {logos.map((logo, idx) => (
+          <div
+            key={idx}
+            className="flex items-center p-0 m-0 justify-center w-38 h-20" 
+          >
+            <img
+              src={logo}
+              alt={`Logo ${idx + 1}`}
+              className="max-h-full max-w-full object-contain hover:scale-105 transition-transform duration-300"
+            />
           </div>
-        </div>
-      </div>
+        ))}
+      </Marquee>
 
+      {/* Bottom subtle line */}
       <div className="absolute -bottom-2 left-0 w-full mb-3">
-        <div className="relative w-full h-px bg-white-900">
+        <div className="relative w-full h-px bg-white/10">
           <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
