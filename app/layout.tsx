@@ -27,13 +27,13 @@ export default function RootLayout({
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-          integrity="sha512-u9fCz+jGkV/0eMcbYxXZ5FZVny4NBaE9hM7FqQ9U9lM0+olV7U2f2jD05WpO7C8AQ0+H1FwKfVJknWZ+2wPw2g=="
+          // integrity="sha512-u9fCz+jGkV/0eMcbYxXZ5FZVny4NBaE9hM7FqQ9U9lM0+olV7U2f2jD05WpO7C8AQ0+H1FwKfVJknWZ+2wPw2g=="
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
       </head>
       <body>
-
+        
         <Navbar />
         {children}
         <Footer />

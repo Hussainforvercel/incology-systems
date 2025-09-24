@@ -7,7 +7,7 @@ const AllFeatureSection: React.FC = () => {
   type Service = {
     title: string;
     desc: string;
-    icon?: React.ReactNode;
+    icon?: string;
     link: string; // ✅ zaroori hai
   };
 

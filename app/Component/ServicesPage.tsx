@@ -8,7 +8,7 @@ const ServicesPage = () => {
   type Service = {
     title: string;
     desc: string;
-    icon?: React.ReactNode;
+    icon?: string;
     link: string; // ✅ zaroori hai
   };
 
@@ -16,7 +16,7 @@ const ServicesPage = () => {
 
      {
     title: "Web Application Development",
-    icon: "./icons/code3.png",
+    icon: "/icons/code3.png",
     // icon: "",
     desc: "Scalable, secure, and high-performance web apps from front-end to back-end, we deliver seamless experiences to your business goals.",
     link: "/ServicesProvide/WebDev",
@@ -24,35 +24,35 @@ const ServicesPage = () => {
   },
     {
       title: "Mobile Application Development",
-      icon: "./icons/coding.png",
+      icon: "/icons/coding.png",
       desc: "Sleek, reliable, and high-performance mobile apps for iOS and Android, we deliver engaging experiences tailored to your business goals.",
       link: "/ServicesProvide/MobileDev"
     },
     {
       title: "UI/UX & Graphic Design",
       // icon: "fa-pen",
-      icon: "./icons/graphic-design.png",
+      icon: "/icons/graphic-design.png",
       desc: "Creative, user-focused, and visually striking designs for web and mobile, we craft seamless experiences aligned with your brand identity.",
       link: "/ServicesProvide/UI-UX"
     },
     {
       title: "Digital Marketing & SEO",
       // icon: "fa-ranking-star",
-      icon: "./icons/advertising.png",
+      icon: "/icons/advertising.png",
       desc: "Targeted, data-driven, and growth-focused marketing strategies, we boost your online presence and drive measurable business results.",
       link: "/ServicesProvide/Digital-Marketing"
     },
     {
       title: "WordPress & Shopify",
       // icon: "fa-brands fa-shopify",
-      icon: "./icons/social.png",
+      icon: "/icons/social.png",
       desc: "Custom, flexible, and conversion-focused online stores and websites, we build high-performance platforms tailored to your brands.",
       link: "/ServicesProvide/WordPress-Shopify"
     },
     {
       title: "Blockchain Solutions",
       // icon: "fa-cubes",
-      icon: "./icons/blockchain.png",
+      icon: "/icons/blockchain.png",
       desc: "Smart, resilient, and fully decentralized blockchain solutions, we craft seamless experiences that enhance performance.",
       link: "/ServicesProvide/Blockchain-Solutions "
     },
@@ -72,7 +72,7 @@ const ServicesPage = () => {
             playsInline
             poster="/fallback.jpg"
           >
-            <source src="./backgroundVideo.mp4" type="video/mp4" />
+            <source src="/backgroundVideo.mp4" type="video/mp4" />
           </video>
 
           {/* Text overlay */}
@@ -117,9 +117,8 @@ const ServicesPage = () => {
                   {/* <i className="fa-solid fa-diagram-project text-3xl text-gray-400"></i> */}
                   {/* <i className={`fas ${service.icon} px-2 text-white text-2xl`}></i>
                   <i className={`fas ${service.icon} px-2 text-white text-2xl`}></i> */}
-                  <img width={30} height={30} src={service.icon} alt="" />
-                  <img width={30} height={30} src={service.icon} alt="" />
-                 
+                  <img src={service.icon} width={30} height={30} alt="" />
+                  <img src={service.icon} width={30} height={30} alt="" />
 
                 </div>
               </div>
