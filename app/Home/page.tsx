@@ -1,10 +1,10 @@
 import React from 'react'
-import ProcessSectionWork from '../Component/ProcessPage'
+import HomePage from '../Component/HomePage'
 
 const page = () => {
   return (
     <>
-<ProcessSectionWork />
+<HomePage />
     </>
   )
 }

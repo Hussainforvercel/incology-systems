@@ -1,158 +1,111 @@
 "use client";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Sparkles } from "lucide-react";
 import Link from "next/link";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isPortfolioOpen, setIsPortfolioOpen] = useState(false);
+  const portfolioRef = useRef<HTMLLIElement | null>(null);
+
+  // Close desktop dropdown if clicked outside
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (portfolioRef.current && !portfolioRef.current.contains(e.target as Node)) {
+        setIsPortfolioOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
-    <nav className="text-white px-15 py-4 border-b border-gray-800">
+    <nav className="text-white px-4 py-4 border-b border-gray-800">
       <div className="container mx-auto flex items-center justify-between">
-        {/* Logo */}
 
-        <Link href="/"> <img width={200} src="./incologo.png" alt="" /></Link>
+        <Link href="/"> 
+          <img width={200} src="./incologo.png" alt="Logo" />
+        </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 border border-gray-900 shadow-md px-6 rounded-full py-2">
-          <Link href="/Servicespage"><li className="hover:text-gray-300">Services</li></Link>
-          {/* <li className="hover:text-gray-300 flex">Services <svg xmlns="http://www.w3.org/2000/svg" className="mt-1" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF"><path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/></svg> </li> */}
-          <Link href="/Process"><li className="hover:text-gray-300">Process</li></Link>
-          <Link href="/Pricing"><li className="hover:text-gray-300">Pricing</li></Link>
-          {/* <li><a href="#" className="hover:text-gray-300">Blog</a></li> */}
-          <Link href="/Contact"> <li className="hover:text-gray-300">Contact</li></Link>
-          <Link href="/About"> <li className="hover:text-gray-300">About Us</li></Link>
+        <ul className="hidden lg:flex space-x-6 border border-gray-900 shadow-md px-6 rounded-full py-2 items-center">
+            <Link href="/Home"><li className="hover:text-gray-300 cursor-pointer">Home</li></Link>
+
+          {/* Portfolio Dropdown */}
+          <li className="relative flex items-center hover:text-gray-300 cursor-pointer" ref={portfolioRef}>
+            <button
+              onClick={() => setIsPortfolioOpen(!isPortfolioOpen)}
+              className="flex items-center focus:outline-none"
+            >
+              Portfolio
+              <svg xmlns="http://www.w3.org/2000/svg" className="ml-1 mt-1" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
+                <path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/>
+              </svg>
+            </button>
+
+            {isPortfolioOpen && (
+              <div className="absolute top-full left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-20">
+                <Link href="/mernportfolio" className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">Mern Portfolio</Link>
+                <Link href="/wordpressportfolio" className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">Wordpress Portfolio</Link>
+                <Link href="/mobileportfolio" className="block px-4 py-2 hover:bg-gray-700 cursor-pointer">Mobile Portfolio</Link>
+              </div>
+            )}
+          </li>
+
+          <Link href="/Servicespage"><li className="hover:text-gray-300 cursor-pointer">Services</li></Link>
+          <Link href="/Contact"><li className="hover:text-gray-300 cursor-pointer">Contact Us</li></Link>
+          <Link href="/About"><li className="hover:text-gray-300 cursor-pointer">About Us</li></Link>
         </ul>
+
+        {/* Get Template Button */}
         <button className="hidden sm:flex gap-2 px-5 py-2 rounded-md bg-gray-900 border border-gray-800 items-center">
           <Sparkles className="w-5 h-5 text-gray-400" />
           Get Template
         </button>
 
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-        >
+        {/* Hamburger Menu */}
+        <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Menu */}
-      {isOpen && (
+    {isOpen && (
+  <div className="lg:hidden mt-2 space-y-1 border-t border-gray-800 pt-2">
+    <Link href="/Home" className="block px-4 py-2 hover:text-gray-300">Home</Link>
 
-        <div className="md:hidden mt-4 space-y-3 ">
+    {/* Portfolio Accordion */}
+    <div className="px-4">
+      <button
+        className="w-full flex justify-between items-center py-2 hover:text-gray-300 focus:outline-none"
+        onClick={() => setIsPortfolioOpen(!isPortfolioOpen)}
+      >
+        Portfolio
+        <svg xmlns="http://www.w3.org/2000/svg" className="ml-1" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
+          <path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z"/>
+        </svg>
+      </button>
 
-          <a href="#" className="block hover:text-gray-300">Services</a>
-          <a href="#" className="block hover:text-gray-300">Process</a>
-          <a href="#" className="block hover:text-gray-300">Pricing</a>
-          {/* <a href="#" className="block hover:text-gray-300">Blog</a> */}
-          <Link href="/Contact"> <a href="#" className="block hover:text-gray-300">Contact</a> </Link>
-          <Link href="/About"> <a href="#" className="block hover:text-gray-300">About Us</a> </Link>
-          <button className="border-1 flex gap-2 px-5 mt-3 py-2 rounded-md  bg-gray-900 border-gray-800">
-            <Sparkles className="w-5 h-5 text-grey-400" />
-            Get Template</button>
-
+      {isPortfolioOpen && (
+        <div className="pl-4 space-y-1">
+          <Link href="/mernportfolio" className="block py-1 hover:text-gray-300">Mern Portfolio</Link>
+          <Link href="/wordpressportfolio" className="block py-1 hover:text-gray-300">Wordpress Portfolio</Link>
+          <Link href="/mobileportfolio" className="block py-1 hover:text-gray-300">Mobile Portfolio</Link>
         </div>
       )}
+    </div>
+
+    <Link href="/Servicespage" className="block px-4 py-2 hover:text-gray-300">Services</Link>
+    <Link href="/Contact" className="block px-4 py-2 hover:text-gray-300">Contact Us</Link>
+    <Link href="/About" className="block px-4 py-2 hover:text-gray-300">About Us</Link>
+  </div>
+)}
+
+
+      
     </nav>
   );
 }
-
-
-
-// "use client";
-// import { Menu, X } from "lucide-react";
-// import { useState, useRef, useEffect } from "react";
-// import { Sparkles } from "lucide-react";
-// import Link from "next/link";
-
-// export default function Navbar() {
-//   const [isOpen, setIsOpen] = useState(false);      // mobile menu
-//   const [isDropdownOpen, setIsDropdownOpen] = useState(false); // services dropdown
-//   // 👇 Explicitly type the ref as HTMLLIElement or HTMLDivElement
-//   const dropdownRef = useRef<HTMLLIElement | null>(null);
-
-//   useEffect(() => {
-//     const handleClickOutside = (e: MouseEvent) => {
-//       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
-//         setIsDropdownOpen(false);
-//       }
-//     };
-//     document.addEventListener("mousedown", handleClickOutside);
-//     return () => {
-//       document.removeEventListener("mousedown", handleClickOutside);
-//     };
-//   }, []);
-
-//   return (
-//     <nav className="text-white px-15 py-4 border-b border-gray-800">
-//       <div className="container mx-auto flex items-center justify-between">
-//         {/* Logo */}
-//         <Link href="/">
-//           <img width={200} src="./incologo.png" alt="Logo" />
-//         </Link>
-
-//         {/* Desktop Menu */}
-//         <ul className="hidden md:flex space-x-6 border border-gray-900 shadow-md px-6 rounded-full py-2">
-//           {/* Services Dropdown */}
-//           <li className="relative" ref={dropdownRef}>
-//             <button
-//               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-//               className="hover:text-gray-300 flex items-center"
-//             >
-//               Services
-//               <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#FFFFFF">
-//                 <path d="M480-333 240-573l51-51 189 189 189-189 51 51-240 240Z" />
-//               </svg>
-//             </button>
-
-//             {isDropdownOpen && (
-//               <div className="absolute left-0 mt-2 w-48 bg-gray-800 rounded-lg shadow-lg z-20">
-//                 <Link href="/WebDev" className="block px-4 py-2 hover:bg-gray-700">
-//                   Web Development
-//                 </Link>
-//                 <Link href="/mobile-apps" className="block px-4 py-2 hover:bg-gray-700">
-//                   Mobile Apps
-//                 </Link>
-//                 <Link href="/design" className="block px-4 py-2 hover:bg-gray-700">
-//                   Digital Design
-//                 </Link>
-//               </div>
-//             )}
-//           </li>
-
-//           <Link href="/Process"><li className="hover:text-gray-300">Process</li></Link>
-//           <Link href="/Pricing"><li className="hover:text-gray-300">Pricing</li></Link>
-//           <Link href="/Contact"><li className="hover:text-gray-300">Contact</li></Link>
-//           <Link href="/About"><li className="hover:text-gray-300">About Us</li></Link>
-//         </ul>
-
-//         <button className="hidden sm:flex gap-2 px-5 py-2 rounded-md bg-gray-900 border border-gray-800 items-center">
-//           <Sparkles className="w-5 h-5 text-gray-400" />
-//           Get Template
-//         </button>
-
-//         {/* Mobile Menu Button */}
-//         <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-//           {isOpen ? <X size={28} /> : <Menu size={28} />}
-//         </button>
-//       </div>
-
-//       {/* Mobile Menu */}
-//       {isOpen && (
-//         <div className="md:hidden mt-4 space-y-3">
-//           <a href="#" className="block hover:text-gray-300">Services</a>
-//           <a href="#" className="block hover:text-gray-300">Process</a>
-//           <a href="#" className="block hover:text-gray-300">Pricing</a>
-//           <Link href="/Contact"><a className="block hover:text-gray-300">Contact</a></Link>
-//           <Link href="/About"><a className="block hover:text-gray-300">About Us</a></Link>
-//           <button className="border-1 flex gap-2 px-5 mt-3 py-2 rounded-md bg-gray-900 border-gray-800">
-//             <Sparkles className="w-5 h-5 text-grey-400" />
-//             Get Template
-//           </button>
-//         </div>
-//       )}
-//     </nav>
-//   );
-// }
