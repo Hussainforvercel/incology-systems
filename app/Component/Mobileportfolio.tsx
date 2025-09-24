@@ -104,9 +104,9 @@ export default function MobileSection() {
             <FaMobileAlt className="text-white text-lg" />
             OUR WORK
           </button>
-          <h2 className="text-3xl font-semibold text-white mt-2">
-            Mobile <span className="italic text-gray-300">Portfolio</span>
-          </h2>
+          <h1 className="text-5xl font-semibold text-white mt-2" style={{fontFamily: "Valty DEMO"}}>
+            Mobile Portfolio
+          </h1>
           <p className="text-gray-400 mt-2 text-sm max-w-lg mx-auto">
             A showcase of our mobile application designs and prototypes. Hover
             over the cards to explore interactive scrolling previews.

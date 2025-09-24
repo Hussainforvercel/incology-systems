@@ -11,7 +11,6 @@ interface CardContent {
 
 const ProcessSection: React.FC = () => {
   const [step, setStep] = useState(0);
-
   const content: CardContent[] = [
     {
       number: "01",
@@ -70,8 +69,8 @@ const ProcessSection: React.FC = () => {
         </motion.div>
 
         {/* Heading */}
-        <motion.h2 variants={childText} className="text-3xl sm:text-5xl font-bold mb-4">
-          Our Simple & <span className="italic font-serif text-gray-200">Smart Process</span>
+        <motion.h2 variants={childText} className="text-3xl sm:text-5xl font-bold mb-4" style={{fontFamily:"Valty DEMO"}}>
+          Our Simple & Smart Process
         </motion.h2>
 
         {/* Subheading */}
@@ -117,14 +116,14 @@ const ProcessSection: React.FC = () => {
 
             {/* Right Text */}
             <motion.div variants={container} className="text-start">
-              <motion.p variants={childText} className="text-gray-400 mb-3 text-lg">
+              <motion.p variants={childText} className="text-gray-400 mb-3 text-lg"  style={{fontFamily:"Valty DEMO"}}>
                 {content[step].number}
               </motion.p>
-              <motion.h5 variants={childText} className="text-4xl mb-4">
+              <motion.h5 variants={childText} className="text-4xl mb-4" style={{fontFamily:"Valty DEMO"}}>
                 {content[step].title}
               </motion.h5>
               {content[step].desc.split(". ").map((line, idx) => (
-                <motion.p key={idx} variants={childText} className="text-gray-400 leading-relaxed text-lg mb-2">
+                <motion.p key={idx} variants={childText} className="text-gray-400 text-md mb-2">
                   {line}.
                 </motion.p>
               ))}

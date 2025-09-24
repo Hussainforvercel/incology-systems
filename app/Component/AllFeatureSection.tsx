@@ -1,13 +1,9 @@
 "use client";
-
-
 import React, { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView, Variants } from "framer-motion";
-
-
 import Link from "next/link";
-const AllFeatureSection: React.FC = () => {
 
+const AllFeatureSection: React.FC = () => {
   type Service = {
     title: string;
     desc: string;
@@ -74,7 +70,6 @@ const AllFeatureSection: React.FC = () => {
     if (isInView) controls.start("visible");
   }, [isInView, controls]);
 
-
   return (
     <section className="relative w-full text-white py-20">
       <div ref={ref} className="max-w-6xl mx-auto px-6 text-center">
@@ -93,9 +88,9 @@ const AllFeatureSection: React.FC = () => {
           initial="hidden"
           animate={controls}
           variants={child}
-          className="text-3xl sm:text-5xl font-bold mb-4"
+          className="text-3xl sm:text-5xl font-bold mb-4" style={{fontFamily:"Valty DEMO"}}
         >
-          All features in <span className="italic font-serif text-gray-200">one place</span>
+          All features in one place
         </motion.h2>
 
         {/* Subheading */}
@@ -109,33 +104,7 @@ const AllFeatureSection: React.FC = () => {
         </motion.p>
 
         {/* Cards */}
-        {/* <motion.div
-          ref={ref}
-          initial="hidden"
-          animate={controls}
-          variants={container}
-          className="flex flex-wrap justify-center gap-8 mb-7"
-        >
-          {cards.map((_, idx) => (
-            <motion.div
-              key={idx}
-              variants={child}
-              className="flex flex-col w-full sm:w-[48%] md:w-[31%] p-8 rounded-2xl border border-t-3 border-gray-800 border-b-gray-900"
-            >
-              <div className="flex pt-8 pb-15 rounded-2xl border border-t-2 bg-gradient-to-bl from-gray-700/30 to-black border-gray-900 justify-center mb-6">
-                <div className="flex items-center bg-[#12151E] gap-5 p-4 mt-4 rounded-xl border border-t-2 border-gray-800">
-                  <i className="fa-solid fa-diagram-project text-3xl text-gray-400"></i>
-                  <i className="fa-solid fa-diagram-project text-3xl text-gray-400"></i>
-                </div>
-              </div>
-              <h3 className="text-lg font-semibold mb-3">Feature Title</h3>
-              <p className="text-gray-400 text-sm">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut commodo.
-              </p>
-            </motion.div>
-          ))}
-        </motion.div> */}
-
+        
         <div className="flex flex-wrap justify-center mt-6 gap-8 mb-7">
           {services.map((service, index) => (
             <motion.div
@@ -158,8 +127,6 @@ const AllFeatureSection: React.FC = () => {
                   <i className={`fas ${service.icon} px-2 text-white text-2xl`}></i> */}
                   <img width={30} height={30} src={service.icon} alt="" />
                   <img width={30} height={30} src={service.icon} alt="" />
-
-
                 </div>
               </div>
               <h3 className="text-2xl font-semibold mb-3" style={{ fontFamily: "Valty DEMO" }}>{service.title}</h3>
@@ -174,14 +141,9 @@ const AllFeatureSection: React.FC = () => {
             </motion.div>
 
           ))}
-
-
         </div>
-
-
-
-
       </div>
+
       <div className="absolute -bottom-3 left-0 w-full mb-3">
         <div className="relative w-full h-px bg-white/10">
           <div className="absolute inset-x-0 bottom-0 h-8 pb-2 bg-gradient-to-t from-white/10 to-transparent pointer-events-none"></div>

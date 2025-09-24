@@ -3,7 +3,6 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { Code, Smartphone, Brush, Search, ShoppingBag, Blocks } from "lucide-react";
 import Link from 'next/link';
-import { div } from 'framer-motion/client';
 
 const ServicesPage = () => {
   type Service = {

@@ -54,9 +54,9 @@ const ReachOut: React.FC = () => {
           {/* Heading */}
           <motion.h1
             variants={fadeUp}
-            className="text-4xl sm:text-5xl font-bold leading-tight"
+            className="text-4xl sm:text-5xl font-bold leading-tight" style={{fontFamily:"Valty DEMO"}}
           >
-            Ready to Automate Smarter? <br /> Let&apos;s <em>Build Together</em>
+            Ready to Automate Smarter? <br /> Let&apos;s Build Together
           </motion.h1>
 
           {/* Description */}

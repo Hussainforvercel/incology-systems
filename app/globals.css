@@ -2,12 +2,8 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 @import "tw-animate-css";
-
 @custom-variant dark (&:is(.dark *));
 
-html, body {
-  /* font-family: 'Libre Baskerville', serif ; */
-}
 @font-face {
   font-family: "Valty DEMO";
   src: url("/fonts/Valty DEMO.otf") format("opentype");

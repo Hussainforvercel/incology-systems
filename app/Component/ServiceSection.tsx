@@ -1,22 +1,8 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import { motion, useAnimation, useInView, Variants } from "framer-motion";
-import {
-  SiReact,
-  SiNodedotjs,
-  SiFlutter,
-  SiMongodb,
-  SiExpress,
-  SiJavascript,
-  SiNextdotjs,
-} from "react-icons/si";
-import {
-  User,
-  Repeat,
-  Sparkles,
-  CheckCircle
-
-} from "lucide-react";
+import {SiReact,SiNodedotjs,SiFlutter,SiTypescript,SiMongodb,SiExpress,SiJavascript,SiNextdotjs} from "react-icons/si";
+import {User,Repeat,Sparkles,CheckCircle} from "lucide-react";
 
 const codeLines = [
   "class AutomationAgent:",
@@ -91,7 +77,7 @@ const features = [
     desc: "Boost efficiency across teams with smart automation. Build intelligent workflows that automate multi-step processes across tools and platforms.",
     icons: [
       { icon: <SiReact />, top: "15%", left: "24%" },
-      { icon: <SiFlutter />, top: "10%", left: "63%" },
+      { icon: <SiTypescript />, top: "10%", left: "63%" },
       { icon: <SiNextdotjs />, top: "20%", left: "83%" },
       { icon: <SiMongodb />, top: "50%", left: "70%" },
       { icon: <SiNodedotjs />, top: "50%", left: "30%" },
@@ -156,10 +142,7 @@ const ServiceSection = () => {
 
   return (
     <>
-
       <div className="relative pt-8 pb-15 px-4 text-white text-center">
-
-
         {/* TEXT SECTION */}
         <motion.div
           ref={textRef}
@@ -180,13 +163,10 @@ const ServiceSection = () => {
             className="text-3xl md:text-4xl  font-bold mt-4" style={{fontFamily: "Valty DEMO"}}
           >
          Future Ready Software Agency Driving <br /> Your Business Forward  {" "}
-           
           </motion.h2>
-
           <motion.p
             variants={fadeUp}
-            className="text-gray-400 mt-3 text-sm md:text-base"
-          >
+            className="text-gray-400 mt-3 text-sm md:text-base">
             Everything you need to automate operations, boost productivity
           </motion.p>
         </motion.div>
@@ -199,14 +179,12 @@ const ServiceSection = () => {
             variants={cardVariant}
             initial="hidden"
             animate={leftControls}
-            className="rounded-2xl border border-t-3 bg-[#04070D] border-gray-800 p-6 shadow-xl h-[400px] flex flex-col justify-between overflow-hidden"
-          >
+            className="rounded-2xl border border-t-3 bg-[#04070D] border-gray-800 p-6 shadow-xl h-[400px] flex flex-col justify-between overflow-hidden">
             <div className="relative mt-5 h-[220px] overflow-hidden">
               <motion.div
                 className="absolute w-full"
                 animate={{ y: -active * 55 }}
-                transition={{ duration: 1.5, ease: "easeInOut" }}
-              >
+                transition={{ duration: 1.5, ease: "easeInOut" }}>
                 {tasks.concat(tasks).map((task, i) => {
                   const isActive = i % tasks.length === active;
                   return (
@@ -253,7 +231,7 @@ const ServiceSection = () => {
                   transition={{ duration: 2, repeat: Infinity }}
                   className="z-20 mb-25 flex h-30 w-30 items-center justify-center border-t-2 border-gray-800 rounded-full bg-black shadow-[0px_7px_15px_rgba(265,265,265,0.25)]"
                 >
-                  <Sparkles size={40} className="text-white" />
+                  <SiFlutter size={40} className="text-white" />
                 </motion.div>
 
                 {features[1].icons.map((item, i) => (
@@ -405,9 +383,6 @@ const ServiceSection = () => {
         </div>
 
       </div>
-
-
-
     </>
   );
 };

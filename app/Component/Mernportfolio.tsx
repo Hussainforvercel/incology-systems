@@ -30,9 +30,9 @@ export default function MernSection() {
             <FaReact className="text-white text-lg" /> {/* Icon added */}
             OUR WORK
           </button>
-          <h2 className="text-3xl font-semibold text-white mt-2">
-            Featured <span className="italic text-gray-300">Projects</span>
-          </h2>
+          <h1 className="text-5xl font-semibold text-white mt-2" style={{fontFamily:"Valty DEMO"}}>
+            Featured Projects
+          </h1>
           <p className="text-gray-400 mt-2 text-sm">
             Explore some of the projects we’ve worked on
           </p>

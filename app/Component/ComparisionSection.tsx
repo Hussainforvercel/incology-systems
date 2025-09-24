@@ -50,15 +50,16 @@ const ComparisionSection: React.FC = () => {
         </motion.span>
 
         {/* Heading */}
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold mt-4"
+        <motion.h1
+          className="text-4xl md:text-4xl font-bold mt-4"
           variants={textVariant}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
+          style={{fontFamily:"Valty DEMO"}}
         >
-          Why Choose Us <span className="italic text-gray-300">Over Others</span>
-        </motion.h2>
+          Why Choose Us Over Others
+        </motion.h1>
 
         {/* Subtext */}
         <motion.p

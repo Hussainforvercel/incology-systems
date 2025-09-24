@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
+import { TypeAnimation } from 'react-type-animation';
 
 const Slider = () => {
   return (
@@ -51,11 +52,30 @@ const Slider = () => {
 
           {/* Text */}
           <p className="text-xs">NEW GEN AI AUTOMATION PARTNER</p>
-          <h1 className="text-4xl sm:text-7xl font-bold leading-tight" style={{fontFamily:"Valty DEMO"}}>
+
+          {/* <h1 className="text-4xl sm:text-7xl font-bold leading-tight" style={{fontFamily:"Valty DEMO"}}>
            From Concept To Launch,<br />We Deliver Software  <br />That Works.
+          </h1> */}
+
+          
+          <h1
+            className="text-4xl sm:text-7xl font-bold leading-tight text-center whitespace-pre-line"
+            style={{ fontFamily: "Valty DEMO" }}
+          >
+            <TypeAnimation
+              sequence={[
+                "From Concept To Launch,\nWe Deliver Software\nThat Works."
+              ]}
+              speed={3}      // typing speed
+              wrapper="span"
+              cursor={false}   // optional: hide blinking cursor after done
+              repeat={0}       // sirf ek dafa chale
+            />
           </h1>
+
+
           <p className="max-w-xl text-sm sm:text-base text-gray-200">
-           Your Partner in smart, Reliable Software,
+            Your Partner in smart, Reliable Software,
           </p>
 
           {/* Icons */}
