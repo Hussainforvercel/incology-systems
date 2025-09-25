@@ -71,8 +71,13 @@ const AllFeatureSection: React.FC = () => {
   }, [isInView, controls]);
 
   return (
+<<<<<<< HEAD
     <section className="relative w-full text-white py-20">
       <div ref={ref} className="max-w-6xl mx-auto px-6 text-center">
+=======
+    <section className="relative w-full text-white py-20 bg-[#04070D]">
+      <div className="max-w-6xl mx-auto px-6 text-center">
+>>>>>>> ae812c919de218668ac6aaa9eaa86d1974080e8f
         {/* Badge */}
         <motion.div
           initial="hidden"

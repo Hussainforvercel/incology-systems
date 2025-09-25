@@ -34,7 +34,7 @@ const ReachOut: React.FC = () => {
   };
 
   return (
-    <section className="h-[110vh] w-full">
+    <section className="h-[110vh] w-full bg-[#04070D]">
       {/* Centered content */}
       <div
         ref={ref}

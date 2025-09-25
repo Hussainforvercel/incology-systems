@@ -1,3 +1,5 @@
+
+
 "use client";
 import { MdEmail, MdHeadsetMic } from "react-icons/md";
 import { FaUsers } from "react-icons/fa";
@@ -5,7 +7,7 @@ import { BiPhoneCall } from "react-icons/bi"; // Example top icon
 
 export default function ContactSection() {
   return (
-    <section className="text-white flex flex-col items-center py-16 px-6 relative">
+    <section className="bg-[#04070D] text-white flex flex-col items-center py-16 px-6 relative">
       {/* 🔹 Top Heading Section */}
       <div className="text-center max-w-2xl mb-12">
         {/* Icon with square box */}
@@ -67,11 +69,11 @@ export default function ContactSection() {
         {/* Right Side (Form) */}
         <div className="bg-[#0A0E14] border border-gray-800 rounded-2xl p-6 text-center group shadow-inner shadow-[rgba(207,231,255,0.2)]">
           {/* Icon on top */}
-          {/* <div className="flex justify-center mb-4">
+          <div className="flex justify-center mb-4">
             <div className="w-16 h-16 flex items-center justify-center rounded-md border border-gray-800 bg-[#10131C] shadow-inner shadow-[rgba(207,231,255,0.2)]">
               <MdHeadsetMic className="text-4xl text-white" />
             </div>
-          </div> */}
+          </div>
 
           {/* Heading */}
           <h2 className="text-2xl font-semibold mb-6">

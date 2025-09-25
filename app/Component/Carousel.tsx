@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae812c919de218668ac6aaa9eaa86d1974080e8f
 "use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -107,7 +112,7 @@ export default function StackedCarousel() {
   }, []);
 
   return (
-    <section className="relative text-white py-16 px-4 sm:px-6 overflow-hidden">
+    <section className="relative text-white py-16 px-4 sm:px-6 overflow-hidden  bg-[#04070D]">
       <div className="max-w-6xl mx-auto">
         {/* Heading with animation */}
         <motion.div

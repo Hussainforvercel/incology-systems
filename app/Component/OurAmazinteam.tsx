@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae812c919de218668ac6aaa9eaa86d1974080e8f
 "use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
@@ -72,7 +77,7 @@ export default function TeamSection() {
   const isInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   return (
-    <section ref={sectionRef} className="relative text-white py-20 px-6">
+    <section ref={sectionRef} className="relative text-white py-20 px-6 bg-[#04070D]">
       <div className="max-w-6xl mx-auto text-center">
         {/* TOP BUTTON */}
         <motion.div

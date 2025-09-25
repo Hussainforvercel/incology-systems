@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae812c919de218668ac6aaa9eaa86d1974080e8f
 "use client";
 import { useEffect, useRef } from "react";
 import {FaXTwitter,FaPinterest,FaInstagram} from "react-icons/fa6";
@@ -53,7 +57,7 @@ export default function IntegrationsSection() {
   }, []);
 
   return (
-    <section className="relative text-white min-h-screen flex justify-center items-center px-6">
+    <section className="relative text-white min-h-screen flex justify-center items-center px-6 bg-[#04070D]">
       <div className="max-w-[1100px] w-full text-center">
         {/* Heading */}
         <motion.div

@@ -142,7 +142,14 @@ const ServiceSection = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <div className="relative pt-8 pb-15 px-4 text-white text-center">
+=======
+
+      <div className="relative pt-8 pb-15 px-4 text-white text-center bg-[#04070D]">
+
+        
+>>>>>>> ae812c919de218668ac6aaa9eaa86d1974080e8f
         {/* TEXT SECTION */}
         <motion.div
           ref={textRef}

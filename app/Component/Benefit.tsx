@@ -1,3 +1,9 @@
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> ae812c919de218668ac6aaa9eaa86d1974080e8f
 "use client";
 import React, { useRef } from "react";
 import { Star } from "lucide-react";
@@ -27,7 +33,7 @@ const AnimatedFeatures = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative text-white py-26 px-4">
+    <section ref={ref} className="relative text-white py-26 px-4 bg-[#04070D]">
       <div className="max-w-6xl mx-auto">
         {/* -------- Heading + Button -------- */}
         <motion.div

@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae812c919de218668ac6aaa9eaa86d1974080e8f
 "use client";
 import { motion, Variants } from "framer-motion";
 
@@ -63,7 +67,7 @@ const cardVariant: Variants = {
 const Testimonials = () => {
 
   return (
-    <section className="text-white py-16 px-4 relative">
+    <section className="text-white py-16 px-4 relative bg-[#04070D]">
       <div className="max-w-6xl mx-auto text-center mb-14">
         {/* Reviews Button */}
         <motion.button

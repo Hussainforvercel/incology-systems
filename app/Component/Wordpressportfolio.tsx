@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> ae812c919de218668ac6aaa9eaa86d1974080e8f
 "use client";
 import Link from "next/link";
 import { FaWordpress } from "react-icons/fa";
@@ -22,7 +26,7 @@ const portfolioItems = [
 
 export default function WordpressSection() {
   return (
-    <section className="relative text-white py-20 px-4">
+    <section className="relative text-white py-20 px-4 bg-[#04070D]">
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <div className="text-center mb-14">

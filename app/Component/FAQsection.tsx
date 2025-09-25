@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> ae812c919de218668ac6aaa9eaa86d1974080e8f
 "use client";
 import { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
@@ -43,7 +48,7 @@ export default function FAQSection() {
   return (
     <section
       ref={sectionRef}
-      className="relative text-white py-16 px-6"
+      className="relative text-white py-16 px-6 bg-[#04070D]"
     >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}

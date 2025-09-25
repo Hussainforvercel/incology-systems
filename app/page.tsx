@@ -14,6 +14,7 @@ import Carousel from "./Component/Carousel";
 import WordpressSection from "./Component/Wordpressportfolio";
 import MernSection from "./Component/Mernportfolio";
 import MobileSection from "./Component/Mobileportfolio";
+import ContactSection from "./Component/Contactsection";
 
 function Home() {
   return (
@@ -34,6 +35,10 @@ function Home() {
       <ComparisionSection />
       <TeamSection />
       <ReachOut />
+<<<<<<< HEAD
+=======
+      <ContactSection/>
+>>>>>>> ae812c919de218668ac6aaa9eaa86d1974080e8f
     </>
   );
 }

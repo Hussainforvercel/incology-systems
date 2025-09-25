@@ -23,7 +23,7 @@ function VerticalScrollCard({
   const scrollDistance = Math.max(0, totalHeight - cardHeight);
 
   return (
-    <div className="bg-[#0D1018] rounded-xl overflow-hidden border border-white/10 shadow-md hover:shadow-lg transition">
+    <div className="bg-[#04070D] rounded-xl overflow-hidden border border-white/10 shadow-md hover:shadow-lg transition">
       {/* Image Scroll Card */}
       <Link href={url} target="_blank">
         <div className="h-96 overflow-hidden rounded-t-xl cursor-pointer">
@@ -96,7 +96,7 @@ export default function MobileSection() {
   ];
 
   return (
-    <section className="relative text-white py-20 px-4">
+    <section className="relative text-white py-20 px-4 bg-[#04070D]">
       <div className="max-w-6xl mx-auto">
         {/* -------- Heading -------- */}
         <div className="text-center mb-14">
