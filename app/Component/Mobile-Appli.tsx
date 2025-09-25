@@ -1,4 +1,5 @@
 
+
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -90,7 +91,7 @@ function MenuSplit(props: any) {
 }
 
 /* ---------------- Main Section ---------------- */
-export default function UiuxDevServices() {
+export default function WebDevServices() {
   const heroRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -122,33 +123,31 @@ export default function UiuxDevServices() {
         {/* Content */}
         <div className="relative z-10 max-w-3xl">
           <h2 className="text-2xl md:text-5xl font-bold text-white mb-4">
-         UI/UX & Graphic Design
+          Mobile Application Development 
           </h2>
 
           <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-           Design is more than how something looks—it’s how it feels to use. Our design team blends
-           creativity with research-driven strategy to create digital experiences that resonate with users.
-
+           Mobile is where your customers spend most of their time. We design and build apps that bring your  business into their hands—literally.
           </p>
         </div>
       </div>
 
       {/* What We Do */}
       <MenuSplit
-        title="UI/UX Services:"
-        image="/images/uiux1.jpg"
+        title="What We Do"
+        image="/images/mobileapp1.jpg"
         items={[
          {
-            title: "Wireframing & Prototyping:",
-            text: "Visualize your app before development begins",
+            title: "Performance-Optimized Apps:",
+            text: "Fast load times, smooth animations, and reliable offline functionality.",
           },
           {
-            title: "User-Centric Design:",
-            text: "Crafting flows and interfaces that minimize friction and maximize engagement.",
+            title: "Integration Ready:",
+            text: "From APIs to payment systems, we connect your app with everything it needs.",
           },
           {
-            title: "Accessibility First:",
-            text: "We ensure inclusivity and usability across devices and audiences.",
+            title: "User-Centric Features:",
+            text: "Push notifications, chat systems, geolocation, in-app purchases, and more.",
           },
         ]}
       />
@@ -156,27 +155,19 @@ export default function UiuxDevServices() {
       {/* Backend Section */}
       <MenuSplit
         reverse
-        title="Graphic Design Services: "
-        image="/images/uiux2.jpg"
+        title="Technologies We Use: "
+        image="/images/mobileapp.jpg"
         items={[
          {
-             title: "Brand Identity:",
-             text: " Logo design, typography, and brand guidelines.",
+             title: "Flutter:",
+             text: " Build cross-platform apps with a single codebase, cutting costs while ensuring high performance.",
            },
            {
-             title: "Marketing Collateral:",
-             text: "Posters, brochures, and banners that elevate your campaigns.",
-           }, {
-             title: "Social Media Assets:",
-             text: "Eye-catching post designs for Instagram, LinkedIn, Facebook, and more",
-           },
-
-            {
-             title: "Tools We Use::",
-             text: "Figma, Adobe Illustrator, Photoshop, Adobe XD.",
+             title: " React Native:",
+             text: "Create near-native experiences for iOS and Android, with flexible integration into your ecosystem.",
            },
         ]}
-         extraText="With Incology Systems, you get designs that are beautiful, functional, and true to your brand identity. "
+         extraText=" Whether you need a business app, an e-commerce platform, or a large-scale enterprise solution, we deliver mobile applications built to scale. "
      />
 
       {/* White Shadow Separation */}
