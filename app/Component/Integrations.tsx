@@ -91,7 +91,7 @@ export default function IntegrationsSection() {
 
         {/* Rows Container */}
         <div
-          className="relative mt-12 bg-[#04070D] border-t-4 border-[#4b4b4d] border-x border-white/5
+          className="relative mt-12 bg-[#04070D] border-t-4 border-[#4b4b4d] border-x 
          rounded-t-3xl shadow-xl overflow-hidden mx-auto max-w-[600px] w-full pb-10 mb-16"
         >
           <div className="space-y-10 py-10">
